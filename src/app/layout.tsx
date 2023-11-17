@@ -1,5 +1,8 @@
 import { Inter } from 'next/font/google'
 import { Providers } from './providers';
+import Header from "./header";
+import Main from "./main";
+import Footer from "./footer";
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -13,7 +16,23 @@ export default function RootLayout({ children, }: { children: React.ReactNode })
     <html lang="ja">
       <body className={inter.className}>
         <Providers>
-          {children}
+          <Header />
+          <div>
+      <h1>新着記事</h1>
+      <ul>
+        <li>記事1</li>
+        <li>記事2</li>
+        <li>記事3</li>
+        <li>記事1</li>
+        <li>記事2</li>
+        <li>記事3</li>
+        <li>記事1</li>
+        <li>記事2</li>
+        <li>記事3</li>
+      </ul>
+    </div>
+          <Main>{children}</Main>
+          <Footer />
         </Providers>
       </body>
     </html>
