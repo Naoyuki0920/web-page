@@ -6,14 +6,14 @@ import NextLink from "next/link";
 export default function Header() {
   return (
     <Box
-    as="header"
-    position="fixed"
-    padding={2}
-    top="0"
-    zIndex={2}
-    width="100%"
-    css={{ backdropFilter: 'blur(10px)' }}
-    bg='#ffffff40'>
+      as="header"
+      position="fixed"
+      padding={2}
+      top="0"
+      zIndex={2}
+      width="100%"
+      css={{ backdropFilter: 'blur(10px)' }}
+      bg='#ffffff40'>
       <Container
         display="flex"
         p={2}
@@ -28,8 +28,8 @@ export default function Header() {
           </Heading>
           <Spacer />
           <Stack
-          spacing="40px"
-          direction={['column', 'row']}
+            spacing="40px"
+            direction={['column', 'row']}
           >
             <NextLink href="/about" p={2}>About</NextLink>
             <NextLink href="/story" p={2}>Story</NextLink>
