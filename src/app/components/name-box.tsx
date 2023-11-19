@@ -14,7 +14,7 @@ export default function NameBox() {
       <Spacer />
       <Image borderRadius='full'
         boxSize='100px'
-        src='./profile.jpg'
+        src='./image/profile.jpg'
         alt='Dan Abramov'></Image>
     </Flex>
   )
