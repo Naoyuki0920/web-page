@@ -5,6 +5,7 @@ import NameBox from "./components/name-box"
 import Title from "./components/title"
 import SectionCard from "./components/section-card"
 import Timeline from "./components/timeline"
+import SNS from "./components/sns"
 
 export default function Home() {
 
@@ -28,12 +29,7 @@ export default function Home() {
       </SectionCard>
       <SectionCard>
         <Title>SNS</Title>
-        <div>
-          
-        </div>
-        <a href="https://example.com/" target="_blank" rel="noopener noreferrer">
-          Website title
-        </a>
+        <SNS />
       </SectionCard>
     </div>
   )

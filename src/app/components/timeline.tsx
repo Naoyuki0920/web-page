@@ -15,11 +15,11 @@ export default function Timeline() {
       </Stack>
       <Stack spacing="20px" direction={['column', 'row']}>
         <Text as="b">2022</Text>
-        <Text>のっティバスどこ Kotlin Ver release</Text>
+        <Text>のっティバスどこ Kotlin ver release</Text>
       </Stack>
       <Stack spacing="20px" direction={['column', 'row']}>
         <Text as="b">2023</Text>
-        <Text>のっティバスどこ Flutter Ver release</Text>
+        <Text>のっティバスどこ Flutter ver release</Text>
       </Stack>
       <Stack spacing="20px" direction={['column', 'row']}>
         <Text as="b">2024~</Text>
