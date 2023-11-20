@@ -8,8 +8,8 @@ export default function Main({ children }: { children: React.ReactNode }) {
       as="main"
       maxW="container.sm"
       minH="calc(100vh - 115px - 2rem)"
-      marginTop="56px"
-      backgroundColor={"lightgrey"}
+      marginTop="72px"
+      // backgroundColor={"lightgrey"}
     >
       {children}
     </Container>

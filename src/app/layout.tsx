@@ -2,10 +2,10 @@ import { Inter } from "next/font/google";
 import { Providers } from "./providers";
 import Header from "./header";
 import Main from "./main";
-import SectionCard from "./components/section-card";
-import { Center, Text, Link } from "@chakra-ui/react";
+
 
 const inter = Inter({ subsets: ["latin"] });
+
 
 export const metadata = {
   title: "Create Next App",

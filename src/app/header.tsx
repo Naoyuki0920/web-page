@@ -13,10 +13,14 @@ import {
 import NextLink from "next/link";
 import { BsBicycle } from "react-icons/bs";
 import { IconContext } from "react-icons";
-import { FaGithub } from "react-icons/fa";
+import { FaGithub, FaSun } from "react-icons/fa";
 import { AiFillAndroid } from "react-icons/ai";
+import { IconButton, useColorMode, useColorModeValue } from "@chakra-ui/react";
+import { MoonIcon } from "@chakra-ui/icons";
 
 export default function Header() {
+  const { colorMode, toggleColorMode } = useColorMode();
+  const bg = useColorModeValue("#ffffff40", "#1a202c40");
   return (
     <Box
       as="header"
@@ -26,13 +30,20 @@ export default function Header() {
       zIndex={2}
       width="100%"
       css={{ backdropFilter: "blur(10px)" }}
-      bg="#ffffff40"
+      bg={bg}
     >
       <Container display="flex" p={2} maxW="container.md">
         <Flex flex={1} justify="space-between">
-          <Heading as="h1" size="md" textAlign="center">
+          <Heading
+            as="h1"
+            size="md"
+            textAlign="center"
+            top="0"
+            bottom="0"
+            margin="auto"
+          >
             <NextLink href="/">
-              <Stack spacing="4px" direction="row">
+              <Stack spacing="4px" direction="row" align="center">
                 <IconContext.Provider value={{ size: "24px" }}>
                   <BsBicycle />
                 </IconContext.Provider>
@@ -42,10 +53,10 @@ export default function Header() {
             </NextLink>
           </Heading>
           <Spacer />
-          <Stack direction="row" spacing="30px">
+          <Stack direction="row" spacing="20px">
             <Button
               leftIcon={<AiFillAndroid />}
-              size="sx"
+              size="md"
               as="a"
               href="./application"
               colorScheme="grey"
@@ -55,7 +66,7 @@ export default function Header() {
             </Button>
             <Button
               leftIcon={<FaGithub />}
-              size="sx"
+              size="md"
               as="a"
               href="https://github.com/Naoyuki0920/web-page"
               colorScheme="grey"
@@ -63,6 +74,11 @@ export default function Header() {
             >
               Source
             </Button>
+            <IconButton
+              aria-label="DarkMode Switch"
+              icon={colorMode === "light" ? <MoonIcon /> : <FaSun />} //自分の好みでSunアイコンはreact-iconsを使用しています
+              onClick={toggleColorMode}
+            />
           </Stack>
         </Flex>
       </Container>
