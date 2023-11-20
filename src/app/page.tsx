@@ -10,7 +10,7 @@ import SNS from "./components/sns";
 export default function Home() {
   return (
     <>
-      <Image src="./image/roadbike.jpg" borderRadius="10px"></Image>
+      <Image src="./image/roadbike.jpg" borderRadius="10px" alt="img"></Image>
       <NameBox />
       <SectionCard>
         <Title>About</Title>
@@ -18,7 +18,7 @@ export default function Home() {
           I am a college student interested in web and mobile development. I
           have been involved in many content production projects. I will
           continue to move forward in whatever direction I feel comfortable. I
-          created this page to try out Next13's App Router.
+          created this page to try out Next13&apos;s App Router.
         </Text>
       </SectionCard>
       <SectionCard>

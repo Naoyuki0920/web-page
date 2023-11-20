@@ -76,6 +76,7 @@ export default function Page() {
             src="./image/notty.png"
             borderRadius="10px"
             width="200px"
+            alt="img"
           ></Image>
         </Stack>
       </SectionCard>
@@ -97,10 +98,10 @@ export default function Page() {
           <Box>
             <Text>
               This application was created as a graduation project. The theme is
-              "Proposal and implementation of a location-based AR infrastructure
-              feasible in a WiFi LAN environment". This is an app that requests
-              AR objects from a server created with Raspberry Pi and draws the
-              sent AR objects.
+              &quot;Proposal and implementation of a location-based AR
+              infrastructure feasible in a WiFi LAN environment&quot;. This is
+              an app that requests AR objects from a server created with
+              Raspberry Pi and draws the sent AR objects.
               <br />
               It was exhibited at iRex2023.
             </Text>

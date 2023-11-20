@@ -1,11 +1,15 @@
 import { Inter } from "next/font/google";
+import { M_PLUS_Rounded_1c } from "next/font/google";
 import { Providers } from "./providers";
 import Header from "./header";
 import Main from "./main";
 
-
 const inter = Inter({ subsets: ["latin"] });
 
+const Rounded = M_PLUS_Rounded_1c({
+  weight: "400",
+  subsets: ["latin"],
+});
 
 export const metadata = {
   title: "Create Next App",
@@ -25,7 +29,7 @@ export default function RootLayout({
           rel="stylesheet"
         ></link>
       </head>
-      <body className={inter.className}>
+      <body className={Rounded.className}>
         <Providers>
           <Header />
           <Main>{children}</Main>

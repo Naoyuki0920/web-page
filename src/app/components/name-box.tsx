@@ -16,7 +16,7 @@ export default function NameBox() {
         borderRadius="full"
         boxSize="100px"
         src="./image/profile.jpg"
-        alt="Dan Abramov"
+        alt="img"
       ></Image>
     </Flex>
   );
