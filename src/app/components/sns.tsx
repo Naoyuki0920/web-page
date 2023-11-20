@@ -1,7 +1,6 @@
 "use client";
 
-import { Stack, Box, Button, Text } from "@chakra-ui/react";
-import { IconContext } from "react-icons";
+import { Button } from "@chakra-ui/react";
 import { FaGithub, FaTwitter, FaInstagram } from "react-icons/fa";
 
 export default function SNS() {

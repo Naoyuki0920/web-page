@@ -2,7 +2,8 @@ import { Inter } from "next/font/google";
 import { Providers } from "./providers";
 import Header from "./header";
 import Main from "./main";
-import Footer from "./footer";
+import SectionCard from "./components/section-card";
+import { Center, Text, Link } from "@chakra-ui/react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,6 +19,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja">
+      <head>
+        <link
+          href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap"
+          rel="stylesheet"
+        ></link>
+      </head>
       <body className={inter.className}>
         <Providers>
           <Header />

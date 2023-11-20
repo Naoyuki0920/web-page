@@ -1,6 +1,6 @@
 "use client";
 
-import { Image, Text, Center } from "@chakra-ui/react";
+import { Image, Text, Center, Link, Stack, Spacer } from "@chakra-ui/react";
 import NameBox from "./components/name-box";
 import Title from "./components/title";
 import SectionCard from "./components/section-card";
@@ -9,15 +9,16 @@ import SNS from "./components/sns";
 
 export default function Home() {
   return (
-    <div>
-      <Image src="./image/roadbike.jpg"></Image>
+    <>
+      <Image src="./image/roadbike.jpg" borderRadius="10px"></Image>
       <NameBox />
       <SectionCard>
         <Title>About</Title>
-        <Text>
+        <Text marginLeft="5px">
           I am a college student interested in web and mobile development. I
           have been involved in many content production projects. I will
-          continue to move forward in whatever direction I feel comfortable.
+          continue to move forward in whatever direction I feel comfortable. I
+          created this page to try out Next13's App Router.
         </Text>
       </SectionCard>
       <SectionCard>
@@ -26,7 +27,7 @@ export default function Home() {
       </SectionCard>
       <SectionCard>
         <Title>Fav</Title>
-        <Text>Road Bike, Reading, Game(Genshin Impact)</Text>
+        <Text marginLeft="5px">Road Bike, Reading, Game(Genshin Impact)</Text>
       </SectionCard>
       <SectionCard>
         <Title>SNS</Title>
@@ -34,11 +35,18 @@ export default function Home() {
       </SectionCard>
       <SectionCard>
         <Center>
-          <Text fontSize="sm">
+          <Text fontSize="xs" color="BlackAlpha 700">
+            Based on{" "}
+            <Link href="https://www.craftz.dog/">Takuya Matsuyama's</Link>{" "}
+            design
+          </Text>
+        </Center>
+        <Center>
+          <Text fontSize="xs" color="BlackAlpha 700">
             © 2023 Naoyuki Masuda. All Rights Reserved.
           </Text>
         </Center>
       </SectionCard>
-    </div>
+    </>
   );
 }
