@@ -37,7 +37,7 @@ export default function Home() {
         <Center>
           <Text fontSize="xs" color="BlackAlpha 700">
             Based on{" "}
-            <Link href="https://www.craftz.dog/">Takuya Matsuyama's</Link>{" "}
+            <Link href="https://www.craftz.dog/">Takuya Matsuyama&apos;s</Link>{" "}
             design
           </Text>
         </Center>
