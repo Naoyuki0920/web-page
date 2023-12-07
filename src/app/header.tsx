@@ -9,6 +9,10 @@ import {
   Stack,
   Text,
   Button,
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
 } from "@chakra-ui/react";
 import NextLink from "next/link";
 import { BsBicycle } from "react-icons/bs";
@@ -16,7 +20,12 @@ import { IconContext } from "react-icons";
 import { FaGithub, FaSun } from "react-icons/fa";
 import { AiFillAndroid } from "react-icons/ai";
 import { IconButton, useColorMode, useColorModeValue } from "@chakra-ui/react";
-import { MoonIcon } from "@chakra-ui/icons";
+import {
+  AddIcon,
+  ExternalLinkIcon,
+  HamburgerIcon,
+  MoonIcon,
+} from "@chakra-ui/icons";
 
 export default function Header() {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -54,26 +63,62 @@ export default function Header() {
           </Heading>
           <Spacer />
           <Stack direction="row" spacing="20px">
-            <Button
-              leftIcon={<AiFillAndroid />}
-              size="md"
-              as="a"
-              href="./application"
-              colorScheme="grey"
-              variant="ghost"
-            >
-              App
-            </Button>
-            <Button
-              leftIcon={<FaGithub />}
-              size="md"
-              as="a"
-              href="https://github.com/Naoyuki0920/web-page"
-              colorScheme="grey"
-              variant="ghost"
-            >
-              Source
-            </Button>
+            <Box display={{ base: "none", md: "block" }}>
+              <Button
+                leftIcon={<AiFillAndroid />}
+                size="md"
+                as="a"
+                href="./application"
+                colorScheme="grey"
+                variant="ghost"
+              >
+                App
+              </Button>
+              <Button
+                leftIcon={<FaGithub />}
+                size="md"
+                as="a"
+                href="https://github.com/Naoyuki0920/web-page"
+                colorScheme="grey"
+                variant="ghost"
+              >
+                Source
+              </Button>
+            </Box>
+
+            <Box display={{ base: "block", md: "none" }}>
+              <Menu>
+                <MenuButton
+                  as={IconButton}
+                  aria-label="Options"
+                  icon={<HamburgerIcon />}
+                  variant="outline"
+                />
+                <MenuList>
+                  <Button
+                    leftIcon={<AiFillAndroid />}
+                    size="md"
+                    as="a"
+                    href="./application"
+                    colorScheme="grey"
+                    variant="ghost"
+                  >
+                    App
+                  </Button>
+                  <Button
+                    leftIcon={<FaGithub />}
+                    size="md"
+                    as="a"
+                    href="https://github.com/Naoyuki0920/web-page"
+                    colorScheme="grey"
+                    variant="ghost"
+                  >
+                    Source
+                  </Button>
+                </MenuList>
+              </Menu>
+            </Box>
+
             <IconButton
               aria-label="DarkMode Switch"
               icon={colorMode === "light" ? <MoonIcon /> : <FaSun />} //自分の好みでSunアイコンはreact-iconsを使用しています
