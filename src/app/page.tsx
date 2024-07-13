@@ -1,6 +1,6 @@
 "use client";
 
-import { Image, Text, Center, Link, Stack, Spacer } from "@chakra-ui/react";
+import { Image, Text, Center, Link } from "@chakra-ui/react";
 import NameBox from "./components/name-box";
 import Title from "./components/title";
 import SectionCard from "./components/section-card";
@@ -14,11 +14,10 @@ export default function Home() {
       <NameBox />
       <SectionCard>
         <Title>About</Title>
-        <Text marginLeft="5px">
-          I am a college student interested in web and mobile development. I
-          have been involved in many content production projects. I will
-          continue to move forward in whatever direction I feel comfortable. I
-          created this page to try out Next13&apos;s App Router.
+        <Text>
+          2024年4月から、NTT西日本でエンジニアとして働いています。
+          大学では情報工学、CSを学び、現在はセキュリティ監視システムの設計、開発を行っています。
+          将来は、IOWNを用いたシステム開発に携わってみたいと考えています。
         </Text>
       </SectionCard>
       <SectionCard>
@@ -27,7 +26,7 @@ export default function Home() {
       </SectionCard>
       <SectionCard>
         <Title>Fav</Title>
-        <Text marginLeft="5px">Road Bike, Reading, Game(Genshin Impact)</Text>
+        <Text>ロードバイク、読書、ゲーム（原神）</Text>
       </SectionCard>
       <SectionCard>
         <Title>SNS</Title>
