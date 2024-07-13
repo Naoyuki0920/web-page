@@ -1,24 +1,16 @@
 // app/page.tsx
 "use client";
 
-import {
-  Image,
-  Text,
-  Button,
-  Spacer,
-  Stack,
-  Center,
-  Link,
-  Box,
-} from "@chakra-ui/react";
+import { Image, Text, Button, Spacer, Center, Link } from "@chakra-ui/react";
 import SectionCard from "../components/section-card";
 import { LinkIcon } from "@chakra-ui/icons";
 import Movie from "../components/movie";
 import { FaChrome, FaGithub } from "react-icons/fa";
+import MotionWrapper from "../components/motionWrapper";
 
 export default function Page() {
   return (
-    <>
+    <MotionWrapper>
       <SectionCard>
         <Button
           leftIcon={<LinkIcon />}
@@ -35,17 +27,11 @@ export default function Page() {
         <Spacer boxSize="5px" />
 
         <Text>
-          This application provides real-time information on the operation
-          status of citizen buses running in Nonoichi City, Ishikawa Prefecture.
-          Using the GPS and camera mounted inside the bus, you can check where
-          the bus is running and how crowded it is at that time.
+          石川県野々市市内を走る市営バスの運行状況をリアルタイムで提供するアプリです。バスに搭載されたGPSとカメラを使って、バスが現在どこを走っているのか、またその時間帯の混雑状況を確認することができます。
           <br />
-          This app was created as part of the BusStop Project, a project within
-          the university.
+          このアプリは、学内プロジェクトであるBusStopプロジェクトの一環として制作されました。
           <br />
-          This app is version 2 and was developed using Flutter. Version 1 was
-          developed using Kotlin. Currently, our junior students are taking the
-          lead in developing it for IOS as well.
+          このアプリはバージョン2で、Flutterで開発されました。バージョン1はKotlinで開発されました。現在、IOS版も後輩が中心となって開発中です。
         </Text>
         <Spacer boxSize="15px" />
         <Button
@@ -87,13 +73,12 @@ export default function Page() {
         <Spacer boxSize="3px" />
         <Spacer boxSize="5px" />
         <Text>
-          This application was created as a graduation project. The theme is
-          &quot;Proposal and implementation of a location-based AR
-          infrastructure feasible in a WiFi LAN environment&quot;. This is an
-          app that requests AR objects from a server created with Raspberry Pi
-          and draws the sent AR objects.
+          このアプリは卒業研究として制作しました。
           <br />
-          It was exhibited at iRex2023.
+          テーマは「WiFi LAN環境で実現可能な位置情報AR基盤の提案と実装」です。Raspberry
+          Piで作成したサーバーにARオブジェクトを要求し、送られてきたARオブジェクトを描画するアプリです。
+          <br />
+          iRex2023に出展しました。
         </Text>
         <Spacer boxSize="15px" />
         <Button
@@ -135,6 +120,6 @@ export default function Page() {
           </Text>
         </Center>
       </SectionCard>
-    </>
+    </MotionWrapper>
   );
 }

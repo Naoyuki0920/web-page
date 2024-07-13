@@ -1,24 +1,27 @@
 "use client";
 
-import { Image, Text, Center, Link, Stack, Spacer } from "@chakra-ui/react";
+import { Image, Text, Center, Link } from "@chakra-ui/react";
 import NameBox from "./components/name-box";
 import Title from "./components/title";
 import SectionCard from "./components/section-card";
 import Timeline from "./components/timeline";
 import SNS from "./components/sns";
+import Motion from "./components/motionWrapper";
+import MotionWrapper from "./components/motionWrapper";
 
 export default function Home() {
   return (
-    <>
+    <MotionWrapper>
       <Image src="./image/roadbike.jpg" borderRadius="10px" alt="img"></Image>
       <NameBox />
       <SectionCard>
         <Title>About</Title>
-        <Text marginLeft="5px">
-          I am a college student interested in web and mobile development. I
-          have been involved in many content production projects. I will
-          continue to move forward in whatever direction I feel comfortable. I
-          created this page to try out Next13&apos;s App Router.
+        <Text>
+          2024年4月から、NTT西日本でエンジニアとして働いています。
+          <br />
+          大学では情報工学、CSを学び、現在はセキュリティ監視システムの設計、開発を行っています。
+          <br />
+          将来は、IOWNを用いたシステム開発に携わってみたいと考えています。
         </Text>
       </SectionCard>
       <SectionCard>
@@ -27,7 +30,7 @@ export default function Home() {
       </SectionCard>
       <SectionCard>
         <Title>Fav</Title>
-        <Text marginLeft="5px">Road Bike, Reading, Game(Genshin Impact)</Text>
+        <Text>ロードバイク、読書、ゲーム（原神）</Text>
       </SectionCard>
       <SectionCard>
         <Title>SNS</Title>
@@ -47,6 +50,6 @@ export default function Home() {
           </Text>
         </Center>
       </SectionCard>
-    </>
+    </MotionWrapper>
   );
 }
