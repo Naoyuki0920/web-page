@@ -16,7 +16,9 @@ export default function Home() {
         <Title>About</Title>
         <Text>
           2024年4月から、NTT西日本でエンジニアとして働いています。
+          <br />
           大学では情報工学、CSを学び、現在はセキュリティ監視システムの設計、開発を行っています。
+          <br />
           将来は、IOWNを用いたシステム開発に携わってみたいと考えています。
         </Text>
       </SectionCard>
