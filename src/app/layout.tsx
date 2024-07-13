@@ -1,13 +1,10 @@
-import { Inter } from "next/font/google";
-import { M_PLUS_Rounded_1c } from "next/font/google";
+import { IBM_Plex_Sans_JP } from "next/font/google";
 import { Providers } from "./providers";
 import Header from "./header";
 import Main from "./main";
 
-const inter = Inter({ subsets: ["latin"] });
-
-const Rounded = M_PLUS_Rounded_1c({
-  weight: "400",
+const ibmPlexSansJP = IBM_Plex_Sans_JP({
+  weight: ["400", "700"],
   subsets: ["latin"],
 });
 
@@ -22,14 +19,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ja">
-      <head>
-        <link
-          href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap"
-          rel="stylesheet"
-        ></link>
-      </head>
-      <body className={Rounded.className}>
+    <html lang="ja" className={ibmPlexSansJP.className}>
+      <head></head>
+      <body>
         <Providers>
           <Header />
           <Main>{children}</Main>
