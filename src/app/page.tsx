@@ -6,10 +6,12 @@ import Title from "./components/title";
 import SectionCard from "./components/section-card";
 import Timeline from "./components/timeline";
 import SNS from "./components/sns";
+import Motion from "./components/motionWrapper";
+import MotionWrapper from "./components/motionWrapper";
 
 export default function Home() {
   return (
-    <>
+    <MotionWrapper>
       <Image src="./image/roadbike.jpg" borderRadius="10px" alt="img"></Image>
       <NameBox />
       <SectionCard>
@@ -48,6 +50,6 @@ export default function Home() {
           </Text>
         </Center>
       </SectionCard>
-    </>
+    </MotionWrapper>
   );
 }

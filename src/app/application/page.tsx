@@ -1,24 +1,16 @@
 // app/page.tsx
 "use client";
 
-import {
-  Image,
-  Text,
-  Button,
-  Spacer,
-  Stack,
-  Center,
-  Link,
-  Box,
-} from "@chakra-ui/react";
+import { Image, Text, Button, Spacer, Center, Link } from "@chakra-ui/react";
 import SectionCard from "../components/section-card";
 import { LinkIcon } from "@chakra-ui/icons";
 import Movie from "../components/movie";
 import { FaChrome, FaGithub } from "react-icons/fa";
+import MotionWrapper from "../components/motionWrapper";
 
 export default function Page() {
   return (
-    <>
+    <MotionWrapper>
       <SectionCard>
         <Button
           leftIcon={<LinkIcon />}
@@ -81,7 +73,9 @@ export default function Page() {
         <Spacer boxSize="3px" />
         <Spacer boxSize="5px" />
         <Text>
-          このアプリは卒業研究として制作しました。テーマは「WiFi LAN環境で実現可能な位置情報AR基盤の提案と実装」です。Raspberry
+          このアプリは卒業研究として制作しました。
+          <br />
+          テーマは「WiFi LAN環境で実現可能な位置情報AR基盤の提案と実装」です。Raspberry
           Piで作成したサーバーにARオブジェクトを要求し、送られてきたARオブジェクトを描画するアプリです。
           <br />
           iRex2023に出展しました。
@@ -126,6 +120,6 @@ export default function Page() {
           </Text>
         </Center>
       </SectionCard>
-    </>
+    </MotionWrapper>
   );
 }
