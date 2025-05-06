@@ -40,7 +40,7 @@ export default function Timeline() {
         </Stack>
         <Stack spacing="20px" direction="row">
           <Text as="b">2024</Text>
-          <Text>NTT西日本入社</Text>
+          <Text>NTT西日本入社 NTTビジネスソリューションズ出向</Text>
         </Stack>
       </div>
     </Stack>

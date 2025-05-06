@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@chakra-ui/react";
-import { FaGithub, FaTwitter, FaInstagram } from "react-icons/fa";
+import { FaGithub, FaTwitter, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 
 export default function SNS() {
   return (
@@ -14,6 +14,15 @@ export default function SNS() {
         variant="ghost"
       >
         GitHub
+      </Button>
+      <Button
+        leftIcon={<FaLinkedinIn />}
+        as="a"
+        href="https://www.linkedin.com/in/%E5%B0%9A%E4%B9%8B-%E5%A2%97%E7%94%B0-5a906a31b/"
+        colorScheme="grey"
+        variant="ghost"
+      >
+        LinkedIn
       </Button>
       <Button
         leftIcon={<FaTwitter />}
