@@ -1,21 +1,26 @@
 "use client";
+import { ChakraProvider, createSystem, defaultConfig, defineConfig } from "@chakra-ui/react";
+import { ThemeProvider } from "next-themes";
 
-import { CacheProvider } from "@chakra-ui/next-js";
-import { ChakraProvider, extendTheme } from "@chakra-ui/react";
+const customConfig = defineConfig({
+  theme: {
+    tokens: {
+      fonts: {
+        heading: { value: "M PLUS Rounded 1c, sans-serif" },
+        body: { value: "M PLUS Rounded 1c, sans-serif" },
+      },
+    },
+  },
+});
+
+const system = createSystem(defaultConfig, customConfig);
 
 export function Providers({ children }: { children: React.ReactNode }) {
   return (
-    <CacheProvider>
-      <ChakraProvider
-        theme={extendTheme({
-          fonts: {
-            heading: "M PLUS Rounded 1c, sans-serif;",
-            body: "M PLUS Rounded 1c, sans-serif;",
-          },
-        })}
-      >
+    <ChakraProvider value={system}>
+      <ThemeProvider attribute="class" disableTransitionOnChange>
         {children}
-      </ChakraProvider>
-    </CacheProvider>
+      </ThemeProvider>
+    </ChakraProvider>
   );
 }

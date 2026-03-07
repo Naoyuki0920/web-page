@@ -10,26 +10,19 @@ import {
   Text,
   Button,
   Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
+  IconButton,
+  ClientOnly,
+  Skeleton,
 } from "@chakra-ui/react";
+import { useColorMode } from "./components/color-mode";
 import NextLink from "next/link";
 import { BsBicycle } from "react-icons/bs";
 import { IconContext } from "react-icons";
-import { FaGithub, FaSun } from "react-icons/fa";
+import { FaGithub, FaSun, FaMoon, FaBars } from "react-icons/fa";
 import { AiFillAndroid } from "react-icons/ai";
-import { IconButton, useColorMode, useColorModeValue } from "@chakra-ui/react";
-import {
-  AddIcon,
-  ExternalLinkIcon,
-  HamburgerIcon,
-  MoonIcon,
-} from "@chakra-ui/icons";
 
 export default function Header() {
   const { colorMode, toggleColorMode } = useColorMode();
-  const bg = useColorModeValue("#ffffff40", "#1a202c40");
   return (
     <Box
       as="header"
@@ -39,7 +32,8 @@ export default function Header() {
       zIndex={2}
       width="100%"
       css={{ backdropFilter: "blur(10px)" }}
-      bg={bg}
+      bg="#ffffff40"
+      _dark={{ bg: "#1a202c40" }}
     >
       <Container display="flex" p={2} maxW="container.md">
         <Flex flex={1} justify="space-between">
@@ -52,7 +46,7 @@ export default function Header() {
             margin="auto"
           >
             <NextLink href="/">
-              <Stack spacing="4px" direction="row" align="center">
+              <Stack gap="4px" direction="row" align="center">
                 <IconContext.Provider value={{ size: "24px" }}>
                   <BsBicycle />
                 </IconContext.Provider>
@@ -62,68 +56,50 @@ export default function Header() {
             </NextLink>
           </Heading>
           <Spacer />
-          <Stack direction="row" spacing="20px">
+          <Stack direction="row" gap="20px">
             <Box display={{ base: "none", md: "block" }}>
-              <Button
-                leftIcon={<AiFillAndroid />}
-                size="md"
-                as="a"
-                href="./application"
-                colorScheme="grey"
-                variant="ghost"
-              >
-                App
+              <Button asChild size="md" variant="ghost">
+                <a href="./application">
+                  <AiFillAndroid />&nbsp;App
+                </a>
               </Button>
-              <Button
-                leftIcon={<FaGithub />}
-                size="md"
-                as="a"
-                href="https://github.com/Naoyuki0920/web-page"
-                colorScheme="grey"
-                variant="ghost"
-              >
-                Source
+              <Button asChild size="md" variant="ghost">
+                <a href="https://github.com/Naoyuki0920/web-page">
+                  <FaGithub />&nbsp;Source
+                </a>
               </Button>
             </Box>
 
             <Box display={{ base: "block", md: "none" }}>
-              <Menu>
-                <MenuButton
-                  as={IconButton}
-                  aria-label="Options"
-                  icon={<HamburgerIcon />}
-                  variant="outline"
-                />
-                <MenuList>
-                  <Button
-                    leftIcon={<AiFillAndroid />}
-                    size="md"
-                    as="a"
-                    href="./application"
-                    colorScheme="grey"
-                    variant="ghost"
-                  >
-                    App
-                  </Button>
-                  <Button
-                    leftIcon={<FaGithub />}
-                    size="md"
-                    as="a"
-                    href="https://github.com/Naoyuki0920/web-page"
-                    colorScheme="grey"
-                    variant="ghost"
-                  >
-                    Source
-                  </Button>
-                </MenuList>
-              </Menu>
+              <Menu.Root>
+                <Menu.Trigger asChild>
+                  <IconButton variant="outline" aria-label="Options">
+                    <FaBars />
+                  </IconButton>
+                </Menu.Trigger>
+                <Menu.Content>
+                  <Menu.Item value="app" asChild>
+                    <a href="./application">
+                      <AiFillAndroid />&nbsp;App
+                    </a>
+                  </Menu.Item>
+                  <Menu.Item value="source" asChild>
+                    <a href="https://github.com/Naoyuki0920/web-page">
+                      <FaGithub />&nbsp;Source
+                    </a>
+                  </Menu.Item>
+                </Menu.Content>
+              </Menu.Root>
             </Box>
 
-            <IconButton
-              aria-label="DarkMode Switch"
-              icon={colorMode === "light" ? <MoonIcon /> : <FaSun />} //自分の好みでSunアイコンはreact-iconsを使用しています
-              onClick={toggleColorMode}
-            />
+            <ClientOnly fallback={<Skeleton boxSize="8" />}>
+              <IconButton
+                aria-label="DarkMode Switch"
+                onClick={toggleColorMode}
+              >
+                {colorMode === "light" ? <FaMoon /> : <FaSun />}
+              </IconButton>
+            </ClientOnly>
           </Stack>
         </Flex>
       </Container>

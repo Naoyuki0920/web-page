@@ -3,24 +3,18 @@
 
 import { Image, Text, Button, Spacer, Center, Link } from "@chakra-ui/react";
 import SectionCard from "../components/section-card";
-import { LinkIcon } from "@chakra-ui/icons";
+import { FaLink, FaChrome, FaGithub } from "react-icons/fa";
 import Movie from "../components/movie";
-import { FaChrome, FaGithub } from "react-icons/fa";
 import MotionWrapper from "../components/motionWrapper";
 
 export default function Page() {
   return (
     <MotionWrapper>
       <SectionCard>
-        <Button
-          leftIcon={<LinkIcon />}
-          size="sx"
-          as="a"
-          href="https://play.google.com/store/apps/details?id=com.busstopprj.buslocationsystem&hl=bs&gl=US"
-          colorScheme="grey"
-          variant="ghost"
-        >
-          のっティバスどこ
+        <Button asChild size="sm" variant="ghost">
+          <a href="https://play.google.com/store/apps/details?id=com.busstopprj.buslocationsystem&hl=bs&gl=US">
+            <FaLink />&nbsp;のっティバスどこ
+          </a>
         </Button>
         <Spacer boxSize="3px" />
 
@@ -34,41 +28,26 @@ export default function Page() {
           このアプリはバージョン2で、Flutterで開発されました。バージョン1はKotlinで開発されました。現在、IOS版も後輩が中心となって開発中です。
         </Text>
         <Spacer boxSize="15px" />
-        <Button
-          leftIcon={<FaChrome />}
-          size="sx"
-          as="a"
-          href="https://nottydoko-demo.sodeproject.com/"
-          colorScheme="grey"
-          variant="ghost"
-        >
-          のっティバスどこ
+        <Button asChild size="sm" variant="ghost">
+          <a href="https://nottydoko-demo.sodeproject.com/">
+            <FaChrome />&nbsp;のっティバスどこ
+          </a>
         </Button>
         <Spacer boxSize="15px" />
-        <Button
-          leftIcon={<FaChrome />}
-          size="sx"
-          as="a"
-          href="http://sodeproject.com/busstop/"
-          colorScheme="grey"
-          variant="ghost"
-        >
-          BusStopプロジェクト
+        <Button asChild size="sm" variant="ghost">
+          <a href="http://sodeproject.com/busstop/">
+            <FaChrome />&nbsp;BusStopプロジェクト
+          </a>
         </Button>
         <Spacer boxSize="15px" />
         <Image src="./image/notty.png" width="200px" alt="img"></Image>
       </SectionCard>
 
       <SectionCard>
-        <Button
-          leftIcon={<LinkIcon />}
-          size="sx"
-          as="a"
-          href="https://play.google.com/store/apps/details?id=com.naoyuki.location_based_ar"
-          colorScheme="grey"
-          variant="ghost"
-        >
-          ARアプリ
+        <Button asChild size="sm" variant="ghost">
+          <a href="https://play.google.com/store/apps/details?id=com.naoyuki.location_based_ar">
+            <FaLink />&nbsp;ARアプリ
+          </a>
         </Button>
         <Spacer boxSize="3px" />
         <Spacer boxSize="5px" />
@@ -81,26 +60,16 @@ export default function Page() {
           iRex2023に出展しました。
         </Text>
         <Spacer boxSize="15px" />
-        <Button
-          leftIcon={<FaChrome />}
-          size="sx"
-          as="a"
-          href="https://minorunakazawa.github.io/i2lab/"
-          colorScheme="grey"
-          variant="ghost"
-        >
-          中沢研究室
+        <Button asChild size="sm" variant="ghost">
+          <a href="https://minorunakazawa.github.io/i2lab/">
+            <FaChrome />&nbsp;中沢研究室
+          </a>
         </Button>
         <Spacer boxSize="15px" />
-        <Button
-          leftIcon={<FaGithub />}
-          size="sx"
-          as="a"
-          href="https://github.com/Naoyuki0920/Location_Based_AR_System_Flutter"
-          colorScheme="grey"
-          variant="ghost"
-        >
-          Source
+        <Button asChild size="sm" variant="ghost">
+          <a href="https://github.com/Naoyuki0920/Location_Based_AR_System_Flutter">
+            <FaGithub />&nbsp;Source
+          </a>
         </Button>
         <Spacer boxSize="15px" />
         <Movie />
