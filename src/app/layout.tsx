@@ -19,7 +19,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ja" className={ibmPlexSansJP.className}>
+    <html lang="ja" className={ibmPlexSansJP.className} suppressHydrationWarning>
       <head></head>
       <body>
         <Providers>

@@ -6,21 +6,21 @@ export default function Timeline() {
   return (
     <Stack direction="row">
       <div>
-        <Stack spacing="20px" direction="row">
+        <Stack gap="20px" direction="row">
           <Text as="b">2020</Text>
           <Text>
             金沢工業大学 工学部 情報工学科 入学
           </Text>
         </Stack>
-        <Stack spacing="20px" direction="row">
+        <Stack gap="20px" direction="row">
           <Text as="b">2021</Text>
           <Text>
-            <Link href="https://miraigotolab.co.jp/" isExternal>
+            <Link href="https://miraigotolab.co.jp/" target="_blank" rel="noopener noreferrer">
               みらいごとラボ join
             </Link>
           </Text>
         </Stack>
-        <Stack spacing="20px" direction="row">
+        <Stack gap="20px" direction="row">
           <Text as="b">2022</Text>
           <Text>
             <Link href="https://play.google.com/store/apps/details?id=com.busstopprj.buslocationsystem&hl=ja&gl=US">
@@ -29,7 +29,7 @@ export default function Timeline() {
             Kotlin ver リリース
           </Text>
         </Stack>
-        <Stack spacing="20px" direction="row">
+        <Stack gap="20px" direction="row">
           <Text as="b">2023</Text>
           <Text>
             <Link href="https://play.google.com/store/apps/details?id=com.busstopprj.buslocationsystem&hl=ja&gl=US">
@@ -38,9 +38,9 @@ export default function Timeline() {
             Flutter ver リリース
           </Text>
         </Stack>
-        <Stack spacing="20px" direction="row">
+        <Stack gap="20px" direction="row">
           <Text as="b">2024</Text>
-          <Text>NTT西日本入社 NTTビジネスソリューションズ出向</Text>
+          <Text>NTT西日本株式会社 入社</Text>
         </Stack>
       </div>
     </Stack>

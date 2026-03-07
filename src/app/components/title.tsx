@@ -1,12 +1,12 @@
 "use client";
 
 import { Stack, Text } from "@chakra-ui/react";
-import { LinkIcon } from "@chakra-ui/icons";
+import { FaLink } from "react-icons/fa";
 
 export default function Title({ children }: { children: React.ReactNode }) {
   return (
-    <Stack direction="row">
-      <LinkIcon height="30px"></LinkIcon>
+    <Stack direction="row" align="center">
+      <FaLink style={{ fontSize: "1.25rem" }} />
       <Text as={"b"} fontSize="xl">
         {children}
       </Text>

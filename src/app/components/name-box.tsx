@@ -18,7 +18,7 @@ export default function NameBox() {
           <Stack
             direction={{ base: "column", sm: "column" }}
             align={{ base: "flex-start", sm: "flex-start" }} // 左寄せに変更
-            spacing={2}
+            gap={2}
           >
             <Text as="b" fontSize={{ base: "3xl", sm: "4xl" }} textAlign="left">
               Naoyuki Masuda

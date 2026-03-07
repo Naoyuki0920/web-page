@@ -17,7 +17,7 @@ export default function Home() {
       <SectionCard>
         <Title>About</Title>
         <Text>
-          2024年4月から、NTT西日本でエンジニアとして働いています。NTTビジネスソリューションズ バリューデザイン部で、セキュリティログ監視システムの設計、開発を行っています。
+          2024年4月から、NTT西日本でエンジニアとして働いています。NTTビジネスソリューションズ バリューデザイン部で、セキュリティログ監視分析サービスのシステムの設計、開発を行っています。
           <br />
           
         </Text>
@@ -28,7 +28,7 @@ export default function Home() {
       </SectionCard>
       <SectionCard>
         <Title>Fav</Title>
-        <Text>ロードバイク、読書</Text>
+        <Text>ロードバイク、読書、自作キーボード</Text>
       </SectionCard>
       <SectionCard>
         <Title>SNS</Title>
