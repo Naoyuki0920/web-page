@@ -2,37 +2,32 @@
 
 import { Text, Stack, Link } from "@chakra-ui/react";
 
+const NOTTY_URL =
+  "https://play.google.com/store/apps/details?id=com.busstopprj.buslocationsystem&hl=ja&gl=JP";
+
+const entries = [
+  { year: "2020", body: "金沢工業大学 情報工学科 入学" },
+  { year: "2022", link: "のっティバスどこ", body: " Kotlin ver リリース" },
+  { year: "2023", link: "のっティバスどこ", body: " Flutter ver リリース" },
+  { year: "2024", body: "ソフトウェアエンジニアとして就職" },
+];
+
 export default function Timeline() {
   return (
-    <Stack direction="row">
-      <div>
-        <Stack gap="20px" direction="row">
-          <Text as="b">2020</Text>
-          <Text>大学 情報工学科 入学</Text>
-        </Stack>
-        <Stack gap="20px" direction="row">
-          <Text as="b">2022</Text>
+    <Stack gap={1}>
+      {entries.map((entry) => (
+        <Stack key={entry.year} gap="20px" direction="row">
+          <Text as="b">{entry.year}</Text>
           <Text>
-            <Link href="https://play.google.com/store/apps/details?id=com.busstopprj.buslocationsystem&hl=ja&gl=US">
-              のっティバスどこ
-            </Link>{" "}
-            Kotlin ver リリース
+            {entry.link && (
+              <Link href={NOTTY_URL} target="_blank" rel="noopener noreferrer">
+                {entry.link}
+              </Link>
+            )}
+            {entry.body}
           </Text>
         </Stack>
-        <Stack gap="20px" direction="row">
-          <Text as="b">2023</Text>
-          <Text>
-            <Link href="https://play.google.com/store/apps/details?id=com.busstopprj.buslocationsystem&hl=ja&gl=US">
-              のっティバスどこ
-            </Link>{" "}
-            Flutter ver リリース
-          </Text>
-        </Stack>
-        <Stack gap="20px" direction="row">
-          <Text as="b">2024</Text>
-          <Text>ソフトウェアエンジニアとして就職</Text>
-        </Stack>
-      </div>
+      ))}
     </Stack>
   );
 }

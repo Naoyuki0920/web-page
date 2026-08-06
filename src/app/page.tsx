@@ -1,12 +1,12 @@
 "use client";
 
-import { Text, Center, Link } from "@chakra-ui/react";
+import { Text } from "@chakra-ui/react";
 import NameBox from "./components/name-box";
 import Title from "./components/title";
 import SectionCard from "./components/section-card";
 import Timeline from "./components/timeline";
 import SNS from "./components/sns";
-import Motion from "./components/motionWrapper";
+import Footer from "./components/footer";
 import MotionWrapper from "./components/motionWrapper";
 
 export default function Home() {
@@ -16,9 +16,7 @@ export default function Home() {
       <SectionCard>
         <Title>About</Title>
         <Text>
-          2024年4月から、ソフトウェアエンジニアとして働いています。セキュリティログ監視分析サービスのシステムの設計、開発を行っています。
-          <br />
-          
+          2024年4月から、ソフトウェアエンジニアとして働いています。セキュリティログ監視・分析サービスのシステム設計と開発を行っています。
         </Text>
       </SectionCard>
       <SectionCard>
@@ -33,20 +31,7 @@ export default function Home() {
         <Title>SNS</Title>
         <SNS />
       </SectionCard>
-      <SectionCard>
-        <Center>
-          <Text fontSize="xs" color="BlackAlpha 700">
-            Based on{" "}
-            <Link href="https://www.craftz.dog/">Takuya Matsuyama&apos;s</Link>{" "}
-            design
-          </Text>
-        </Center>
-        <Center>
-          <Text fontSize="xs" color="BlackAlpha 700">
-            © 2023 Naoyuki Masuda. All Rights Reserved.
-          </Text>
-        </Center>
-      </SectionCard>
+      <Footer />
     </MotionWrapper>
   );
 }

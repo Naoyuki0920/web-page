@@ -48,7 +48,8 @@ export default function Page() {
             </Text>
             <Text>
               ・<b>AIによる要約・概況</b>
-              ：記事の見出し等を要約サービス（Anthropic Claude）に送信し、要約・概況を生成します。生成結果は全ユーザーで共有・キャッシュされ、特定の個人には紐づきません。
+              ：記事の見出し等を要約サービス（Anthropic
+              Claude）に送信し、要約・概況を生成します。生成結果は全ユーザーで共有・キャッシュされ、特定の個人には紐づきません。
             </Text>
             <Text>
               ・<b>Web検索</b>
@@ -58,7 +59,8 @@ export default function Page() {
 
           <Heading size="lg">サブスクリプション（FlatNews+）</Heading>
           <Text>
-            有料機能の購入・更新・解約は、AppleのApp Store（StoreKit）を通じて行われます。お支払い情報はAppleが管理し、本アプリは受け取りません。本アプリは購入状態（有効か否か）のみを参照します。
+            有料機能の購入・更新・解約は、AppleのApp
+            Store（StoreKit）を通じて行われます。お支払い情報はAppleが管理し、本アプリは受け取りません。本アプリは購入状態（有効か否か）のみを参照します。
           </Text>
 
           <Heading size="lg">第三者サービス</Heading>
@@ -87,13 +89,13 @@ export default function Page() {
             本ポリシーや本アプリに関するお問い合わせは、以下のメールアドレスまでご連絡ください。
           </Text>
           <Text>
-            <Link href="mailto:flat.news.support@gmail.com">
-              flat.news.support@gmail.com
+            <Link href="mailto:naoyuki.masuda.dev@gmail.com">
+              naoyuki.masuda.dev@gmail.com
             </Link>
           </Text>
 
           <Text fontSize="sm" color="gray.500">
-            最終更新日：2026年6月20日
+            最終更新日：2026年8月1日
           </Text>
         </Stack>
       </SectionCard>
