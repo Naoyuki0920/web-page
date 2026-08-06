@@ -1,6 +1,6 @@
 "use client";
 
-import { Image, Text, Center, Link } from "@chakra-ui/react";
+import { Text, Center, Link } from "@chakra-ui/react";
 import NameBox from "./components/name-box";
 import Title from "./components/title";
 import SectionCard from "./components/section-card";
@@ -12,12 +12,11 @@ import MotionWrapper from "./components/motionWrapper";
 export default function Home() {
   return (
     <MotionWrapper>
-      <Image src="./image/roadbike.jpg" borderRadius="10px" alt="img"></Image>
       <NameBox />
       <SectionCard>
         <Title>About</Title>
         <Text>
-          2024年4月から、NTT西日本でエンジニアとして働いています。NTTビジネスソリューションズ バリューデザイン部で、セキュリティログ監視システムの設計、開発を行っています。
+          2024年4月から、ソフトウェアエンジニアとして働いています。セキュリティログ監視システムの設計、開発を行っています。
           <br />
           
         </Text>

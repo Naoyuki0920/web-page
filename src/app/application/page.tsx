@@ -82,17 +82,6 @@ export default function Page() {
         </Text>
         <Spacer boxSize="15px" />
         <Button
-          leftIcon={<FaChrome />}
-          size="sx"
-          as="a"
-          href="https://minorunakazawa.github.io/i2lab/"
-          colorScheme="grey"
-          variant="ghost"
-        >
-          中沢研究室
-        </Button>
-        <Spacer boxSize="15px" />
-        <Button
           leftIcon={<FaGithub />}
           size="sx"
           as="a"

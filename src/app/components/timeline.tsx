@@ -8,17 +8,7 @@ export default function Timeline() {
       <div>
         <Stack spacing="20px" direction="row">
           <Text as="b">2020</Text>
-          <Text>
-            金沢工業大学 工学部 情報工学科 入学
-          </Text>
-        </Stack>
-        <Stack spacing="20px" direction="row">
-          <Text as="b">2021</Text>
-          <Text>
-            <Link href="https://miraigotolab.co.jp/" isExternal>
-              みらいごとラボ join
-            </Link>
-          </Text>
+          <Text>大学 情報工学科 入学</Text>
         </Stack>
         <Stack spacing="20px" direction="row">
           <Text as="b">2022</Text>
@@ -40,7 +30,7 @@ export default function Timeline() {
         </Stack>
         <Stack spacing="20px" direction="row">
           <Text as="b">2024</Text>
-          <Text>NTT西日本入社 NTTビジネスソリューションズ出向</Text>
+          <Text>ソフトウェアエンジニアとして就職</Text>
         </Stack>
       </div>
     </Stack>

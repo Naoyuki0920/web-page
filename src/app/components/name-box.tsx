@@ -24,7 +24,7 @@ export default function NameBox() {
               Naoyuki Masuda
             </Text>
             <Text textAlign="left">
-              Android App Creator & Security Engineer
+              iOS App Creator & Security Engineer
             </Text>
           </Stack>
         </Flex>
@@ -32,7 +32,7 @@ export default function NameBox() {
         <Image
           borderRadius="full"
           boxSize={{ base: "80px", sm: "100px" }}
-          src="./image/profile02.jpg"
+          src="./image/profile03.png"
           alt="img"
           mt={{ base: 4, sm: 0 }}
         />
