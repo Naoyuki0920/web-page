@@ -61,12 +61,6 @@ export default function Page() {
         </Text>
         <Spacer boxSize="15px" />
         <Button asChild size="sm" variant="ghost">
-          <a href="https://minorunakazawa.github.io/i2lab/">
-            <FaChrome />&nbsp;中沢研究室
-          </a>
-        </Button>
-        <Spacer boxSize="15px" />
-        <Button asChild size="sm" variant="ghost">
           <a href="https://github.com/Naoyuki0920/Location_Based_AR_System_Flutter">
             <FaGithub />&nbsp;Source
           </a>
