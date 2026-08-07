@@ -6,7 +6,6 @@ export default function NameBox() {
   return (
     <Box>
       <Flex
-        flex={1}
         direction={{ base: "column", sm: "row" }}
         align={{ base: "center", sm: "flex-start" }}
         justify="space-between"
@@ -14,26 +13,18 @@ export default function NameBox() {
         mx="auto"
         padding={5}
       >
-        <Flex align="center">
-          <Stack
-            direction={{ base: "column", sm: "column" }}
-            align={{ base: "flex-start", sm: "flex-start" }} // 左寄せに変更
-            gap={2}
-          >
-            <Text as="b" fontSize={{ base: "3xl", sm: "4xl" }} textAlign="left">
-              Naoyuki Masuda
-            </Text>
-            <Text textAlign="left">
-              Android App Creator & Security Engineer
-            </Text>
-          </Stack>
-        </Flex>
+        <Stack align="flex-start" gap={2}>
+          <Text as="b" fontSize={{ base: "3xl", sm: "4xl" }}>
+            Naoyuki Masuda
+          </Text>
+          <Text>iOS App Creator &amp; Security Engineer</Text>
+        </Stack>
         <Spacer />
         <Image
           borderRadius="full"
           boxSize={{ base: "80px", sm: "100px" }}
-          src="./image/profile02.jpg"
-          alt="img"
+          src="/image/profile03.png"
+          alt="増田尚幸のプロフィール写真"
           mt={{ base: 4, sm: 0 }}
         />
       </Flex>

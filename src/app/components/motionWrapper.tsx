@@ -2,7 +2,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 
- // クライアントサイドでレンダリングされるコンポーネントに必要な記述
+// クライアントサイドでレンダリングされるコンポーネントに必要な記述
 
 export default function MotionWrapper({
   children,
