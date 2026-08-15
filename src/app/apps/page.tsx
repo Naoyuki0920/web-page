@@ -13,6 +13,7 @@ import NextLink from "next/link";
 import { FaLink } from "react-icons/fa";
 import SectionCard from "../components/section-card";
 import MotionWrapper from "../components/motionWrapper";
+import FeatureSection from "../components/feature-section";
 import Footer from "../components/footer";
 
 const FLATNEWS_STORE_URL = "https://apps.apple.com/jp/app/id6784650295?ct=web";
@@ -20,12 +21,44 @@ const FLATNEWS_STORE_URL = "https://apps.apple.com/jp/app/id6784650295?ct=web";
 const PREPARING_NOTE =
   "App Storeでの公開を準備しています。公開日は、約束できる段階になってから書きます。";
 
+function AppRow({
+  icon,
+  alt,
+  name,
+  tagline,
+}: {
+  icon: string;
+  alt: string;
+  name: string;
+  tagline: string;
+}) {
+  return (
+    <Stack direction="row" align="center" gap="20px">
+      <Image
+        src={icon}
+        alt={alt}
+        boxSize="64px"
+        borderRadius="22%"
+        borderWidth="1px"
+        borderColor="border"
+      />
+      <Stack gap={0}>
+        <Text as="b" fontSize="xl">
+          {name}
+        </Text>
+        <Text color="fg.muted">{tagline}</Text>
+      </Stack>
+    </Stack>
+  );
+}
+
 export default function Page() {
   return (
     <MotionWrapper>
       <SectionCard>
         <Stack gap={4}>
           <Heading size="2xl">広告のないアプリを、3つ作っています。</Heading>
+          <Box w="20px" h="2px" bg="accent" />
           <Text>
             ニュース、観葉植物の記録、スクリーンタイム。分野は違いますが、3つとも、実装しないことを先に決めてから作りました。
           </Text>
@@ -37,20 +70,12 @@ export default function Page() {
 
       <SectionCard>
         <Stack gap={4}>
-          <Stack direction="row" align="center" gap="20px">
-            <Image
-              src="/image/flatnews-icon.png"
-              alt="FlatNewsのアプリアイコン"
-              boxSize="64px"
-              borderRadius="22%"
-            />
-            <Stack gap={0}>
-              <Text as="b" fontSize="xl">
-                FlatNews
-              </Text>
-              <Text>静かで、正直なニュース。</Text>
-            </Stack>
-          </Stack>
+          <AppRow
+            icon="/image/flatnews-icon.png"
+            alt="FlatNewsのアプリアイコン"
+            name="FlatNews"
+            tagline="静かで、正直なニュース。"
+          />
           <Text>
             広告も、追跡も、無限スクロールもないニュースアプリです。並び順はメディア均等で、特定の媒体がフィードを独占しません。
           </Text>
@@ -77,20 +102,12 @@ export default function Page() {
 
       <SectionCard>
         <Stack gap={4}>
-          <Stack direction="row" align="center" gap="20px">
-            <Image
-              src="/image/myplants-icon.png"
-              alt="うちの植物のアプリアイコン"
-              boxSize="64px"
-              borderRadius="22%"
-            />
-            <Stack gap={0}>
-              <Text as="b" fontSize="xl">
-                うちの植物
-              </Text>
-              <Text>急かさない観葉植物の育成記録アプリ。</Text>
-            </Stack>
-          </Stack>
+          <AppRow
+            icon="/image/myplants-icon.png"
+            alt="うちの植物のアプリアイコン"
+            name="うちの植物"
+            tagline="急かさない観葉植物の育成記録アプリ。"
+          />
           <Text>
             水やりの予定日を表示しません。通知は朝1回、「そろそろ土を見てみましょう」だけです。
           </Text>
@@ -102,7 +119,7 @@ export default function Page() {
               </NextLink>
             </Button>
           </Box>
-          <Text fontSize="sm" color="gray.500">
+          <Text fontSize="sm" color="fg.muted">
             {PREPARING_NOTE}
           </Text>
         </Stack>
@@ -110,20 +127,12 @@ export default function Page() {
 
       <SectionCard>
         <Stack gap={4}>
-          <Stack direction="row" align="center" gap="20px">
-            <Image
-              src="/image/hitomazu-icon.png"
-              alt="ひとまずのアプリアイコン"
-              boxSize="64px"
-              borderRadius="22%"
-            />
-            <Stack gap={0}>
-              <Text as="b" fontSize="xl">
-                ひとまず
-              </Text>
-              <Text>スマホの使いすぎに、ひと呼吸。</Text>
-            </Stack>
-          </Stack>
+          <AppRow
+            icon="/image/hitomazu-icon.png"
+            alt="ひとまずのアプリアイコン"
+            name="ひとまず"
+            tagline="スマホの使いすぎに、ひと呼吸。"
+          />
           <Text>
             ブロックせずに、開く前に「いま、何をしに?」と聞きます。引き返した回数を数えるアプリです。
           </Text>
@@ -135,15 +144,14 @@ export default function Page() {
               </NextLink>
             </Button>
           </Box>
-          <Text fontSize="sm" color="gray.500">
+          <Text fontSize="sm" color="fg.muted">
             {PREPARING_NOTE}
           </Text>
         </Stack>
       </SectionCard>
 
       <SectionCard>
-        <Stack gap={4}>
-          <Heading size="lg">3つのアプリが、断ったもの</Heading>
+        <FeatureSection title="3つのアプリが、断ったもの">
           <Text>機能の一覧ではなく、実装しなかったものの一覧です。</Text>
           <Table.ScrollArea>
             <Table.Root size="sm">
@@ -173,47 +181,59 @@ export default function Page() {
               </Table.Body>
             </Table.Root>
           </Table.ScrollArea>
-        </Stack>
+        </FeatureSection>
       </SectionCard>
 
       <SectionCard>
-        <Stack gap={4}>
-          <Heading size="lg">よくある質問</Heading>
+        <FeatureSection title="よくある質問">
+          <Stack gap={5}>
+            <Stack gap={2}>
+              <Heading size="md">広告のないニュースアプリはありますか。</Heading>
+              <Text>
+                FlatNewsは、広告のないニュースアプリです。26媒体・約2,400記事/日を、特定の媒体に偏らない並びで表示します。行動追跡もおすすめもなく、収益はFlatNews+（月400円・年3,000円）だけです。広告は今後も入れません。
+              </Text>
+            </Stack>
 
-          <Heading size="md">広告のないニュースアプリはありますか。</Heading>
-          <Text>
-            FlatNewsは、広告のないニュースアプリです。26媒体・約2,400記事/日を、特定の媒体に偏らない並びで表示します。行動追跡もおすすめもなく、収益はFlatNews+（月400円・年3,000円）だけです。広告は今後も入れません。
-          </Text>
+            <Stack gap={2}>
+              <Heading size="md">
+                水やりを催促しない観葉植物アプリはありますか。
+              </Heading>
+              <Text>
+                うちの植物は、水やりの予定日を表示しない育成記録アプリです。通知は朝1回、「そろそろ土を見てみましょう」だけで、水をあげるかどうかはあなたが決めます。現在、App
+                Storeでの公開を準備しています。
+              </Text>
+            </Stack>
 
-          <Heading size="md">
-            水やりを催促しない観葉植物アプリはありますか。
-          </Heading>
-          <Text>
-            うちの植物は、水やりの予定日を表示しない育成記録アプリです。通知は朝1回、「そろそろ土を見てみましょう」だけで、水をあげるかどうかはあなたが決めます。現在、App
-            Storeでの公開を準備しています。
-          </Text>
+            <Stack gap={2}>
+              <Heading size="md">
+                スマホをブロックしないスクリーンタイム アプリはありますか。
+              </Heading>
+              <Text>
+                ひとまずは、アプリをブロックしません。開く前にシールドが「いま、何をしに?」と聞くだけです。引き返した回数を数え、前週比や罰、ストリークはありません。現在、App
+                Storeでの公開を準備しています。
+              </Text>
+            </Stack>
 
-          <Heading size="md">
-            スマホをブロックしないスクリーンタイム アプリはありますか。
-          </Heading>
-          <Text>
-            ひとまずは、アプリをブロックしません。開く前にシールドが「いま、何をしに?」と聞くだけです。引き返した回数を数え、前週比や罰、ストリークはありません。現在、App
-            Storeでの公開を準備しています。
-          </Text>
+            <Stack gap={2}>
+              <Heading size="md">なぜ広告を入れないのですか。</Heading>
+              <Text>
+                広告で収益を得ると、あなたの滞在時間が私の収入になります。その構造のままでは、静かなアプリは作れません。だから3つとも、収益は少額の課金だけにしています。
+              </Text>
+            </Stack>
 
-          <Heading size="md">なぜ広告を入れないのですか。</Heading>
-          <Text>
-            広告で収益を得ると、あなたの滞在時間が私の収入になります。その構造のままでは、静かなアプリは作れません。だから3つとも、収益は少額の課金だけにしています。
-          </Text>
+            <Stack gap={2}>
+              <Heading size="md">利用データはどこに保存されますか。</Heading>
+              <Text>
+                3つとも、あなたの記録は端末とあなたのiCloudにだけ保存されます。開発者のサーバーにユーザーのデータを置きません。「信じてください」ではなく、構造的に集められない設計です。
+              </Text>
+            </Stack>
 
-          <Heading size="md">利用データはどこに保存されますか。</Heading>
-          <Text>
-            3つとも、あなたの記録は端末とあなたのiCloudにだけ保存されます。開発者のサーバーにユーザーのデータを置きません。「信じてください」ではなく、構造的に集められない設計です。
-          </Text>
-
-          <Heading size="md">誰が作っていますか。</Heading>
-          <Text>Naoyuki Masudaが、個人で開発しています。</Text>
-        </Stack>
+            <Stack gap={2}>
+              <Heading size="md">誰が作っていますか。</Heading>
+              <Text>Naoyuki Masudaが、個人で開発しています。</Text>
+            </Stack>
+          </Stack>
+        </FeatureSection>
       </SectionCard>
 
       <SectionCard>

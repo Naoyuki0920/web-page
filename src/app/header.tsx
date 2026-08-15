@@ -33,8 +33,10 @@ export default function Header() {
       zIndex={2}
       width="100%"
       css={{ backdropFilter: "blur(10px)" }}
-      bg="#ffffff40"
-      _dark={{ bg: "#1a202c40" }}
+      bg="rgba(240, 239, 234, 0.75)"
+      _dark={{ bg: "rgba(25, 25, 23, 0.65)" }}
+      borderBottomWidth="1px"
+      borderColor="border.muted"
     >
       <Container display="flex" p={2} maxW="3xl">
         <Flex flex={1} justify="space-between" align="center">

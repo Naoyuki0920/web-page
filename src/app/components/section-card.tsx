@@ -7,5 +7,15 @@ export default function SectionCard({
 }: {
   children: React.ReactNode;
 }) {
-  return <Container padding={5}>{children}</Container>;
+  return (
+    <Container
+      px={5}
+      py={8}
+      borderTopWidth="1px"
+      borderColor="border.muted"
+      _first={{ borderTopWidth: "0" }}
+    >
+      {children}
+    </Container>
+  );
 }

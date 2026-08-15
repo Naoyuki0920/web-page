@@ -141,7 +141,7 @@ export default function Page() {
             </Link>
           </Text>
 
-          <Text fontSize="sm" color="gray.500">
+          <Text fontSize="sm" color="fg.muted">
             最終更新日：2026年8月12日
           </Text>
         </Stack>
