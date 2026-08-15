@@ -1,8 +1,9 @@
 "use client";
 
 import { Box, Image, Text, Button } from "@chakra-ui/react";
+import NextLink from "next/link";
 import SectionCard from "../components/section-card";
-import { FaLink, FaChrome, FaGithub } from "react-icons/fa";
+import { FaLink, FaChrome, FaGithub, FaApple } from "react-icons/fa";
 import Movie from "../components/movie";
 import Footer from "../components/footer";
 import MotionWrapper from "../components/motionWrapper";
@@ -10,6 +11,17 @@ import MotionWrapper from "../components/motionWrapper";
 export default function Page() {
   return (
     <MotionWrapper>
+      <SectionCard>
+        <Text>現在はiOSアプリを中心に開発しています。</Text>
+        <Box h="8px" />
+        <Button asChild size="sm" variant="ghost">
+          <NextLink href="/apps">
+            <FaApple />
+            &nbsp;iOSアプリを見る
+          </NextLink>
+        </Button>
+      </SectionCard>
+
       <SectionCard>
         <Button asChild size="sm" variant="ghost">
           <a

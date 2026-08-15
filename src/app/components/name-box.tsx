@@ -24,7 +24,7 @@ export default function NameBox() {
           borderRadius="full"
           boxSize={{ base: "80px", sm: "100px" }}
           src="/image/profile03.png"
-          alt="増田尚幸のプロフィール写真"
+          alt="Naoyuki Masudaのプロフィール写真"
           mt={{ base: 4, sm: 0 }}
         />
       </Flex>
