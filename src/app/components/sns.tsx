@@ -19,7 +19,7 @@ export default function SNS() {
       </Button>
       <Button asChild size="sm" variant="ghost">
         <a
-          href="https://x.com/naoyuki_m_dev"
+          href="https://x.com/naoyuki_dev"
           target="_blank"
           rel="noopener noreferrer"
         >

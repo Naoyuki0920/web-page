@@ -17,7 +17,7 @@ import {
 import { useColorMode } from "./components/color-mode";
 import NextLink from "next/link";
 import { BsBicycle } from "react-icons/bs";
-import { FaGithub, FaSun, FaMoon, FaBars } from "react-icons/fa";
+import { FaGithub, FaSun, FaMoon, FaBars, FaApple } from "react-icons/fa";
 import { AiFillAndroid } from "react-icons/ai";
 
 const SOURCE_URL = "https://github.com/Naoyuki0920/web-page";
@@ -50,9 +50,15 @@ export default function Header() {
           <Stack direction="row" gap="20px" align="center">
             <Box display={{ base: "none", md: "block" }}>
               <Button asChild size="md" variant="ghost">
+                <NextLink href="/apps">
+                  <FaApple />
+                  &nbsp;Apps
+                </NextLink>
+              </Button>
+              <Button asChild size="md" variant="ghost">
                 <NextLink href="/application">
                   <AiFillAndroid />
-                  &nbsp;App
+                  &nbsp;Android
                 </NextLink>
               </Button>
               <Button asChild size="md" variant="ghost">
@@ -71,10 +77,16 @@ export default function Header() {
                   </IconButton>
                 </Menu.Trigger>
                 <Menu.Content>
+                  <Menu.Item value="apps" asChild>
+                    <NextLink href="/apps">
+                      <FaApple />
+                      &nbsp;Apps
+                    </NextLink>
+                  </Menu.Item>
                   <Menu.Item value="app" asChild>
                     <NextLink href="/application">
                       <AiFillAndroid />
-                      &nbsp;App
+                      &nbsp;Android
                     </NextLink>
                   </Menu.Item>
                   <Menu.Item value="source" asChild>

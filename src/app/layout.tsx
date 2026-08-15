@@ -12,12 +12,13 @@ const ibmPlexSansJP = IBM_Plex_Sans_JP({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.naoyuki0920.com"),
   title: {
     default: "Naoyuki Masuda - Homepage",
     template: "%s | Naoyuki Masuda",
   },
   description:
-    "増田尚幸のポートフォリオサイト。制作したアプリや経歴を掲載しています。",
+    "Naoyuki Masudaのポートフォリオサイト。制作したアプリや経歴を掲載しています。",
 };
 
 export default function RootLayout({
