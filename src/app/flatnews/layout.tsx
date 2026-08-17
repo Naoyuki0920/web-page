@@ -4,6 +4,9 @@ export const metadata: Metadata = {
   title: "FlatNews",
   description:
     "静かで、正直なニュース。広告なし・追跡なし・無限スクロールなしのニュースアプリFlatNewsの紹介ページです。",
+  alternates: {
+    canonical: "/flatnews",
+  },
   openGraph: {
     title: "FlatNews | Naoyuki Masuda",
     description:

@@ -1,6 +1,7 @@
 "use client";
 
-import { Box, Image, Text, Button } from "@chakra-ui/react";
+import { Box, Heading, Stack, Text, Button } from "@chakra-ui/react";
+import NextImage from "next/image";
 import NextLink from "next/link";
 import SectionCard from "../components/section-card";
 import { FaLink, FaChrome, FaGithub, FaApple } from "react-icons/fa";
@@ -12,14 +13,21 @@ export default function Page() {
   return (
     <MotionWrapper>
       <SectionCard>
-        <Text>現在はiOSアプリを中心に開発しています。</Text>
-        <Box h="8px" />
-        <Button asChild size="sm" variant="ghost">
-          <NextLink href="/apps">
-            <FaApple />
-            &nbsp;iOSアプリを見る
-          </NextLink>
-        </Button>
+        <Stack gap={4}>
+          <Heading as="h1" size="2xl">
+            Androidアプリ
+          </Heading>
+          <Box w="20px" h="2px" bg="accent" />
+          <Text>現在はiOSアプリを中心に開発しています。</Text>
+          <Box>
+            <Button asChild size="sm" variant="ghost">
+              <NextLink href="/apps">
+                <FaApple />
+                &nbsp;iOSアプリを見る
+              </NextLink>
+            </Button>
+          </Box>
+        </Stack>
       </SectionCard>
 
       <SectionCard>
@@ -65,11 +73,14 @@ export default function Page() {
           </a>
         </Button>
         <Box h="15px" />
-        <Image
-          src="/image/notty.png"
-          width="200px"
-          alt="のっティバスどこのアプリ画面"
-        />
+        <Box asChild w="200px" h="auto">
+          <NextImage
+            src="/image/notty.png"
+            alt="のっティバスどこのアプリ画面"
+            width={400}
+            height={933}
+          />
+        </Box>
       </SectionCard>
 
       <SectionCard>

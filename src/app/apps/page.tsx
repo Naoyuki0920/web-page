@@ -4,11 +4,11 @@ import {
   Box,
   Button,
   Heading,
-  Image,
   Stack,
   Table,
   Text,
 } from "@chakra-ui/react";
+import NextImage from "next/image";
 import NextLink from "next/link";
 import { FaLink } from "react-icons/fa";
 import SectionCard from "../components/section-card";
@@ -34,14 +34,15 @@ function AppRow({
 }) {
   return (
     <Stack direction="row" align="center" gap="20px">
-      <Image
-        src={icon}
-        alt={alt}
+      <Box
+        asChild
         boxSize="64px"
         borderRadius="22%"
         borderWidth="1px"
         borderColor="border"
-      />
+      >
+        <NextImage src={icon} alt={alt} width={256} height={256} />
+      </Box>
       <Stack gap={0}>
         <Text as="b" fontSize="xl">
           {name}
@@ -57,7 +58,9 @@ export default function Page() {
     <MotionWrapper>
       <SectionCard>
         <Stack gap={4}>
-          <Heading size="2xl">広告のないアプリを、3つ作っています。</Heading>
+          <Heading as="h1" size="2xl">
+            広告のないアプリを、3つ作っています。
+          </Heading>
           <Box w="20px" h="2px" bg="accent" />
           <Text>
             ニュース、観葉植物の記録、スクリーンタイム。分野は違いますが、3つとも、実装しないことを先に決めてから作りました。
@@ -188,14 +191,14 @@ export default function Page() {
         <FeatureSection title="よくある質問">
           <Stack gap={5}>
             <Stack gap={2}>
-              <Heading size="md">広告のないニュースアプリはありますか。</Heading>
+              <Heading as="h3" size="md">広告のないニュースアプリはありますか。</Heading>
               <Text>
                 FlatNewsは、広告のないニュースアプリです。26媒体・約2,400記事/日を、特定の媒体に偏らない並びで表示します。行動追跡もおすすめもなく、収益はFlatNews+（月400円・年3,000円）だけです。広告は今後も入れません。
               </Text>
             </Stack>
 
             <Stack gap={2}>
-              <Heading size="md">
+              <Heading as="h3" size="md">
                 水やりを催促しない観葉植物アプリはありますか。
               </Heading>
               <Text>
@@ -205,7 +208,7 @@ export default function Page() {
             </Stack>
 
             <Stack gap={2}>
-              <Heading size="md">
+              <Heading as="h3" size="md">
                 スマホをブロックしないスクリーンタイム アプリはありますか。
               </Heading>
               <Text>
@@ -215,21 +218,21 @@ export default function Page() {
             </Stack>
 
             <Stack gap={2}>
-              <Heading size="md">なぜ広告を入れないのですか。</Heading>
+              <Heading as="h3" size="md">なぜ広告を入れないのですか。</Heading>
               <Text>
                 広告で収益を得ると、あなたの滞在時間が私の収入になります。その構造のままでは、静かなアプリは作れません。だから3つとも、収益は少額の課金だけにしています。
               </Text>
             </Stack>
 
             <Stack gap={2}>
-              <Heading size="md">利用データはどこに保存されますか。</Heading>
+              <Heading as="h3" size="md">利用データはどこに保存されますか。</Heading>
               <Text>
                 3つとも、あなたの記録は端末とあなたのiCloudにだけ保存されます。開発者のサーバーにユーザーのデータを置きません。「信じてください」ではなく、構造的に集められない設計です。
               </Text>
             </Stack>
 
             <Stack gap={2}>
-              <Heading size="md">誰が作っていますか。</Heading>
+              <Heading as="h3" size="md">誰が作っていますか。</Heading>
               <Text>Naoyuki Masudaが、個人で開発しています。</Text>
             </Stack>
           </Stack>

@@ -1,6 +1,7 @@
 "use client";
 
-import { Text, Flex, Stack, Spacer, Image, Box } from "@chakra-ui/react";
+import { Text, Flex, Heading, Stack, Spacer, Box } from "@chakra-ui/react";
+import NextImage from "next/image";
 
 export default function NameBox() {
   return (
@@ -14,19 +15,26 @@ export default function NameBox() {
         padding={5}
       >
         <Stack align="flex-start" gap={2}>
-          <Text as="b" fontSize={{ base: "3xl", sm: "4xl" }}>
+          <Heading as="h1" fontSize={{ base: "3xl", sm: "4xl" }}>
             Naoyuki Masuda
-          </Text>
+          </Heading>
           <Text>iOS App Creator &amp; Security Engineer</Text>
         </Stack>
         <Spacer />
-        <Image
+        <Box
+          asChild
           borderRadius="full"
           boxSize={{ base: "80px", sm: "100px" }}
-          src="/image/profile03.png"
-          alt="Naoyuki Masudaのプロフィール写真"
           mt={{ base: 4, sm: 0 }}
-        />
+        >
+          <NextImage
+            src="/image/profile03.png"
+            alt="Naoyuki Masudaのプロフィール写真"
+            width={400}
+            height={400}
+            priority
+          />
+        </Box>
       </Flex>
     </Box>
   );

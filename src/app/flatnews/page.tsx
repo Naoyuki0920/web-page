@@ -5,10 +5,10 @@ import {
   Button,
   Flex,
   Heading,
-  Image,
   Stack,
   Text,
 } from "@chakra-ui/react";
+import NextImage from "next/image";
 import NextLink from "next/link";
 import { FaLink } from "react-icons/fa";
 import SectionCard from "../components/section-card";
@@ -51,16 +51,25 @@ export default function Page() {
         <Flex direction={{ base: "column", sm: "row" }} gap={{ base: 5, sm: 8 }}>
           <Stack gap={5} flex="1" minW={0}>
             <Stack direction="row" align="center" gap="20px">
-              <Image
-                src="/image/flatnews-icon.png"
-                alt="FlatNewsのアプリアイコン"
+              <Box
+                asChild
                 boxSize="96px"
                 borderRadius="22%"
                 borderWidth="1px"
                 borderColor="border"
-              />
+              >
+                <NextImage
+                  src="/image/flatnews-icon.png"
+                  alt="FlatNewsのアプリアイコン"
+                  width={256}
+                  height={256}
+                  priority
+                />
+              </Box>
               <Stack gap={1}>
-                <Heading size="2xl">FlatNews</Heading>
+                <Heading as="h1" size="2xl">
+                  FlatNews
+                </Heading>
                 <Text>静かで、正直なニュース。</Text>
               </Stack>
             </Stack>
@@ -76,13 +85,21 @@ export default function Page() {
               </Button>
             </Box>
           </Stack>
-          <Image
-            src="/image/flatnews-01.png"
-            alt="FlatNewsのフィード画面。広告ゼロ、追跡ゼロ"
-            width="220px"
+          <Box
+            asChild
+            w="220px"
+            h="auto"
             borderRadius="xl"
             alignSelf={{ base: "center", sm: "flex-start" }}
-          />
+          >
+            <NextImage
+              src="/image/flatnews-01.png"
+              alt="FlatNewsのフィード画面。広告ゼロ、追跡ゼロ"
+              width={369}
+              height={800}
+              priority
+            />
+          </Box>
         </Flex>
       </SectionCard>
 

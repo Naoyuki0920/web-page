@@ -40,7 +40,7 @@ export default function Header() {
     >
       <Container display="flex" p={2} maxW="3xl">
         <Flex flex={1} justify="space-between" align="center">
-          <Heading as="h1" size="md">
+          <Heading as="div" size="md">
             <NextLink href="/">
               <Stack gap="8px" direction="row" align="center">
                 <BsBicycle size="24px" />

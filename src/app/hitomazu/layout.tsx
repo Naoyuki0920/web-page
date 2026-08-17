@@ -4,6 +4,9 @@ export const metadata: Metadata = {
   title: "ひとまず",
   description:
     "スマホの使いすぎに、ひと呼吸。ブロックしないスクリーンタイム アプリ「ひとまず」の紹介ページです。",
+  alternates: {
+    canonical: "/hitomazu",
+  },
   openGraph: {
     title: "ひとまず | Naoyuki Masuda",
     description:

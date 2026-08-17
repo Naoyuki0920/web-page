@@ -4,6 +4,9 @@ export const metadata: Metadata = {
   title: "Apps",
   description:
     "広告のないiOSアプリを3つ作っています。FlatNews・うちの植物・ひとまずの紹介ページです。",
+  alternates: {
+    canonical: "/apps",
+  },
   openGraph: {
     title: "Apps | Naoyuki Masuda",
     description:
