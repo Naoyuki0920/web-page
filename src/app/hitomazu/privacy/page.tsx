@@ -9,12 +9,14 @@ export default function Page() {
     <MotionWrapper>
       <SectionCard>
         <Stack gap={4}>
-          <Heading size="2xl">ひとまず プライバシーポリシー</Heading>
+          <Heading as="h1" size="2xl">
+            ひとまず プライバシーポリシー
+          </Heading>
           <Text>
             ひとまず（以下「本アプリ」）は、ユーザーのプライバシーを最優先に設計されています。本ポリシーは、本アプリが扱う情報・扱わない情報について説明します。
           </Text>
 
-          <Heading size="lg">基本方針</Heading>
+          <Heading as="h2" size="lg">基本方針</Heading>
           <Stack gap={1}>
             <Text>・本アプリは、ユーザーの行動を追跡しません。</Text>
             <Text>・広告および第三者のトラッキングSDKを一切使用しません。</Text>
@@ -27,7 +29,7 @@ export default function Page() {
             </Text>
           </Stack>
 
-          <Heading size="lg">スクリーンタイムへのアクセスについて</Heading>
+          <Heading as="h2" size="lg">スクリーンタイムへのアクセスについて</Heading>
           <Text>
             本アプリは、選んだアプリを開く前にひと呼吸を挟むために、Appleのスクリーンタイム関連機能（Family
             Controls）へのアクセス許可をお願いします。この許可は、見守るアプリを選ぶ操作をした時にのみ求めます。
@@ -49,7 +51,7 @@ export default function Page() {
             </Text>
           </Stack>
 
-          <Heading size="lg">保存される情報</Heading>
+          <Heading as="h2" size="lg">保存される情報</Heading>
           <Text>
             以下はお使いの端末内に保存されます。本アプリを削除すると、これらの情報も端末から削除されます。
           </Text>
@@ -62,7 +64,7 @@ export default function Page() {
             <Text>・問いかけの数や言葉、外観などのアプリ設定</Text>
           </Stack>
 
-          <Heading size="lg">iCloudでの同期について</Heading>
+          <Heading as="h2" size="lg">iCloudでの同期について</Heading>
           <Text>
             設定画面から「iCloudで同期」を有効にできます（
             <b>無料でご利用いただけます</b>
@@ -83,15 +85,15 @@ export default function Page() {
             </Text>
           </Stack>
 
-          <Heading size="lg">外部への送信</Heading>
+          <Heading as="h2" size="lg">外部への送信</Heading>
           <Text>
             本アプリは、記録や設定を開発者のサーバーへ送信することはありません。開発者はサーバーを運用しておらず、送信先そのものが存在しません。分析ツールやクラッシュレポートの外部サービスも使用していません。前項のiCloud同期は、Appleが提供する仕組みを通じてご本人のアカウント内で完結するもので、開発者を経由しません。
           </Text>
 
-          <Heading size="lg">カメラ・写真</Heading>
+          <Heading as="h2" size="lg">カメラ・写真</Heading>
           <Text>本アプリは、カメラおよび写真ライブラリを使用しません。</Text>
 
-          <Heading size="lg">通知について</Heading>
+          <Heading as="h2" size="lg">通知について</Heading>
           <Text>
             本アプリが表示する通知は、<b>週の振り返りのおしらせ1種類だけ</b>
             です（設定画面から有効にした場合のみ。既定ではオフ）。文面は端末内で組み立てられるローカル通知で、開発者のサーバーを経由しません。バッジ（アイコンの赤い丸）は付けません。
@@ -103,13 +105,13 @@ export default function Page() {
             を使います。これはApple提供の同期機能の一部で、開発者が内容を決めることも、送信することもできません。
           </Text>
 
-          <Heading size="lg">購入について（ひとまず Pro）</Heading>
+          <Heading as="h2" size="lg">購入について（ひとまず Pro）</Heading>
           <Text>
             有料機能の購入・更新・解約は、AppleのApp
             Store（StoreKit）を通じて行われます。お支払い情報はAppleが管理し、本アプリは受け取りません。本アプリは購入状態（有効か否か）のみを参照します。
           </Text>
 
-          <Heading size="lg">第三者サービス</Heading>
+          <Heading as="h2" size="lg">第三者サービス</Heading>
           <Text>
             本アプリが利用する外部サービスは、以下のAppleのサービスのみです。取り扱いについては同社のポリシーをご確認ください。
           </Text>
@@ -121,17 +123,17 @@ export default function Page() {
             </Text>
           </Stack>
 
-          <Heading size="lg">子どものプライバシー</Heading>
+          <Heading as="h2" size="lg">子どものプライバシー</Heading>
           <Text>
             本アプリは、特定の年齢層を対象に個人情報を収集することはありません。本アプリのスクリーンタイム機能は、ご本人がご自身の端末に対して使うためのもので、他者の端末を管理する用途では設計されていません。
           </Text>
 
-          <Heading size="lg">ポリシーの変更</Heading>
+          <Heading as="h2" size="lg">ポリシーの変更</Heading>
           <Text>
             本ポリシーは必要に応じて改定されることがあります。重要な変更がある場合は本ページで告知します。
           </Text>
 
-          <Heading size="lg">お問い合わせ</Heading>
+          <Heading as="h2" size="lg">お問い合わせ</Heading>
           <Text>
             本ポリシーや本アプリに関するお問い合わせは、以下のメールアドレスまでご連絡ください。
           </Text>

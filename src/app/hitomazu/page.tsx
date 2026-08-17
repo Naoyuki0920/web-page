@@ -5,10 +5,10 @@ import {
   Button,
   Flex,
   Heading,
-  Image,
   Stack,
   Text,
 } from "@chakra-ui/react";
+import NextImage from "next/image";
 import NextLink from "next/link";
 import { FaLink } from "react-icons/fa";
 import SectionCard from "../components/section-card";
@@ -23,16 +23,25 @@ export default function Page() {
         <Flex direction={{ base: "column", sm: "row" }} gap={{ base: 5, sm: 8 }}>
           <Stack gap={5} flex="1" minW={0}>
             <Stack direction="row" align="center" gap="20px">
-              <Image
-                src="/image/hitomazu-icon.png"
-                alt="ひとまずのアプリアイコン"
+              <Box
+                asChild
                 boxSize="96px"
                 borderRadius="22%"
                 borderWidth="1px"
                 borderColor="border"
-              />
+              >
+                <NextImage
+                  src="/image/hitomazu-icon.png"
+                  alt="ひとまずのアプリアイコン"
+                  width={256}
+                  height={256}
+                  priority
+                />
+              </Box>
               <Stack gap={1}>
-                <Heading size="2xl">ひとまず</Heading>
+                <Heading as="h1" size="2xl">
+                  ひとまず
+                </Heading>
                 <Text>スマホの使いすぎに、ひと呼吸。</Text>
               </Stack>
             </Stack>
@@ -42,13 +51,21 @@ export default function Page() {
               Storeでの公開を準備しています。公開日は、約束できる段階になってから書きます。
             </Text>
           </Stack>
-          <Image
-            src="/image/hitomazu-01.png"
-            alt="ひとまずのシールド画面。いま、何をしに?"
-            width="220px"
+          <Box
+            asChild
+            w="220px"
+            h="auto"
             borderRadius="xl"
             alignSelf={{ base: "center", sm: "flex-start" }}
-          />
+          >
+            <NextImage
+              src="/image/hitomazu-01.png"
+              alt="ひとまずのシールド画面。いま、何をしに?"
+              width={369}
+              height={800}
+              priority
+            />
+          </Box>
         </Flex>
       </SectionCard>
 

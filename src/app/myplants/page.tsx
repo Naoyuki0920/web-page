@@ -1,13 +1,7 @@
 "use client";
 
-import {
-  Box,
-  Button,
-  Heading,
-  Image,
-  Stack,
-  Text,
-} from "@chakra-ui/react";
+import { Box, Button, Heading, Stack, Text } from "@chakra-ui/react";
+import NextImage from "next/image";
 import NextLink from "next/link";
 import { FaLink } from "react-icons/fa";
 import SectionCard from "../components/section-card";
@@ -21,16 +15,25 @@ export default function Page() {
       <SectionCard>
         <Stack gap={5}>
           <Stack direction="row" align="center" gap="20px">
-            <Image
-              src="/image/myplants-icon.png"
-              alt="うちの植物のアプリアイコン"
+            <Box
+              asChild
               boxSize="96px"
               borderRadius="22%"
               borderWidth="1px"
               borderColor="border"
-            />
+            >
+              <NextImage
+                src="/image/myplants-icon.png"
+                alt="うちの植物のアプリアイコン"
+                width={256}
+                height={256}
+                priority
+              />
+            </Box>
             <Stack gap={1}>
-              <Heading size="2xl">うちの植物</Heading>
+              <Heading as="h1" size="2xl">
+                うちの植物
+              </Heading>
               <Text>急かさない観葉植物の育成記録アプリ。</Text>
             </Stack>
           </Stack>

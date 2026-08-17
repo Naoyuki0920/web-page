@@ -4,6 +4,9 @@ export const metadata: Metadata = {
   title: "うちの植物",
   description:
     "急かさない観葉植物の育成記録アプリ「うちの植物」の紹介ページです。水やりの予定日を表示しません。",
+  alternates: {
+    canonical: "/myplants",
+  },
   openGraph: {
     title: "うちの植物 | Naoyuki Masuda",
     description:
