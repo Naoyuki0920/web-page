@@ -12,6 +12,7 @@ const routes: { path: string; priority: number }[] = [
   { path: "/flatnews/privacy", priority: 0.3 },
   { path: "/myplants/privacy", priority: 0.3 },
   { path: "/hitomazu/privacy", priority: 0.3 },
+  { path: "/tokushoho", priority: 0.3 },
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

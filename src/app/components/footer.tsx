@@ -7,6 +7,11 @@ export default function Footer() {
   return (
     <SectionCard>
       <Center>
+        <Link href="/tokushoho" fontSize="xs" color="fg.muted">
+          特定商取引法に基づく表記
+        </Link>
+      </Center>
+      <Center>
         <Text fontSize="xs" color="fg.muted">
           Based on{" "}
           <Link
