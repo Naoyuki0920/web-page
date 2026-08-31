@@ -16,9 +16,37 @@ import MotionWrapper from "../components/motionWrapper";
 import FeatureSection from "../components/feature-section";
 import Footer from "../components/footer";
 
+const STORE_URL = "https://apps.apple.com/jp/app/id6800239037?ct=web";
+
+const appJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: "ひとまず｜スマホの使いすぎに、ひと呼吸",
+  operatingSystem: "iOS",
+  applicationCategory: "HealthApplication",
+  description:
+    "ブロックしません。開く前に、ひと呼吸だけ。シールドが「いま、何をしに?」と聞き、引き返した回数を数えるスクリーンタイム アプリ。",
+  offers: {
+    "@type": "Offer",
+    price: "0",
+    priceCurrency: "JPY",
+    description:
+      "無料のままでも完結して使えます。ひとまず Proは月300円・年1,200円・買い切り5,000円。",
+  },
+  url: "https://apps.apple.com/jp/app/id6800239037",
+  author: {
+    "@type": "Person",
+    name: "Naoyuki Masuda",
+  },
+};
+
 export default function Page() {
   return (
     <MotionWrapper>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(appJsonLd) }}
+      />
       <SectionCard>
         <Flex direction={{ base: "column", sm: "row" }} gap={{ base: 5, sm: 8 }}>
           <Stack gap={5} flex="1" minW={0}>
@@ -46,10 +74,14 @@ export default function Page() {
               </Stack>
             </Stack>
             <Text>ブロックしません。開く前に、ひと呼吸だけ。</Text>
-            <Text fontSize="sm" color="fg.muted">
-              App
-              Storeでの公開を準備しています。公開日は、約束できる段階になってから書きます。
-            </Text>
+            <Box>
+              <Button asChild size="sm" variant="ghost">
+                <a href={STORE_URL} target="_blank" rel="noopener noreferrer">
+                  <FaLink />
+                  &nbsp;App Storeで見る
+                </a>
+              </Button>
+            </Box>
           </Stack>
           <Box
             asChild
@@ -140,7 +172,7 @@ export default function Page() {
       <SectionCard>
         <FeatureSection title="価格">
           <Text>
-            月300円・年1,200円・買い切り4,800円。無料のままでも完結して使えます。ひと呼吸と記録、履歴の振り返り、iCloud同期は無料です。
+            月300円・年1,200円・買い切り5,000円。無料のままでも完結して使えます。ひと呼吸と記録、履歴の振り返り、iCloud同期は無料です。
           </Text>
           <Text>
             ひとまず
@@ -152,9 +184,15 @@ export default function Page() {
       <SectionCard>
         <Stack gap={4}>
           <Text>
-            スマホを開いた理由を、覚えていますか。それを責めずに数えるアプリを、いま公開に向けて仕上げています。
+            スマホを開いた理由を、覚えていますか。それを責めずに数えるアプリを、一度試してみてください。
           </Text>
           <Box>
+            <Button asChild size="sm" variant="ghost">
+              <a href={STORE_URL} target="_blank" rel="noopener noreferrer">
+                <FaLink />
+                &nbsp;App Storeで見る
+              </a>
+            </Button>
             <Button asChild size="sm" variant="ghost">
               <NextLink href="/hitomazu/privacy">
                 <FaLink />

@@ -17,9 +17,8 @@ import FeatureSection from "../components/feature-section";
 import Footer from "../components/footer";
 
 const FLATNEWS_STORE_URL = "https://apps.apple.com/jp/app/id6784650295?ct=web";
-
-const PREPARING_NOTE =
-  "App Storeでの公開を準備しています。公開日は、約束できる段階になってから書きます。";
+const MYPLANTS_STORE_URL = "https://apps.apple.com/jp/app/id6799691902?ct=web";
+const HITOMAZU_STORE_URL = "https://apps.apple.com/jp/app/id6800239037?ct=web";
 
 function AppRow({
   icon,
@@ -63,10 +62,13 @@ export default function Page() {
           </Heading>
           <Box w="20px" h="2px" bg="accent" />
           <Text>
-            ニュース、観葉植物の記録、スクリーンタイム。分野は違いますが、3つとも、実装しないことを先に決めてから作りました。
+            はじまりは、ニュースアプリで広告を誤タップしたことでした。読みたい記事より先に、指が広告に触れる。タップ範囲が大きくて、本文にたどり着けないこともある。世の中の動向を平たく知りたいだけなのに、と思いました。
           </Text>
           <Text>
-            どれも、あなたが長く使っても私は1円も得をしない設計です。だから、あなたを引き止める理由が、どこにもありません。
+            それで自分用に作ったのが FlatNews です。いまは分野の違う3つになりましたが、どれも同じ理由で作っています——自分が使いたいから。
+          </Text>
+          <Text>
+            長く使われても私は1円も得をしません。引き止める仕掛けを作る理由が、設計のどこにもないからです。
           </Text>
         </Stack>
       </SectionCard>
@@ -121,10 +123,17 @@ export default function Page() {
                 &nbsp;詳しく見る
               </NextLink>
             </Button>
+            <Button asChild size="sm" variant="ghost">
+              <a
+                href={MYPLANTS_STORE_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaLink />
+                &nbsp;App Storeで見る
+              </a>
+            </Button>
           </Box>
-          <Text fontSize="sm" color="fg.muted">
-            {PREPARING_NOTE}
-          </Text>
         </Stack>
       </SectionCard>
 
@@ -146,10 +155,17 @@ export default function Page() {
                 &nbsp;詳しく見る
               </NextLink>
             </Button>
+            <Button asChild size="sm" variant="ghost">
+              <a
+                href={HITOMAZU_STORE_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaLink />
+                &nbsp;App Storeで見る
+              </a>
+            </Button>
           </Box>
-          <Text fontSize="sm" color="fg.muted">
-            {PREPARING_NOTE}
-          </Text>
         </Stack>
       </SectionCard>
 
@@ -202,8 +218,7 @@ export default function Page() {
                 水やりを催促しない観葉植物アプリはありますか。
               </Heading>
               <Text>
-                うちの植物は、水やりの予定日を表示しない育成記録アプリです。通知は朝1回、「そろそろ土を見てみましょう」だけで、水をあげるかどうかはあなたが決めます。現在、App
-                Storeでの公開を準備しています。
+                うちの植物は、水やりの予定日を表示しない育成記録アプリです。通知は朝1回、「そろそろ土を見てみましょう」だけで、水をあげるかどうかはあなたが決めます。
               </Text>
             </Stack>
 
@@ -212,8 +227,7 @@ export default function Page() {
                 スマホをブロックしないスクリーンタイム アプリはありますか。
               </Heading>
               <Text>
-                ひとまずは、アプリをブロックしません。開く前にシールドが「いま、何をしに?」と聞くだけです。引き返した回数を数え、前週比や罰、ストリークはありません。現在、App
-                Storeでの公開を準備しています。
+                ひとまずは、アプリをブロックしません。開く前にシールドが「いま、何をしに?」と聞くだけです。引き返した回数を数え、前週比や罰、ストリークはありません。
               </Text>
             </Stack>
 
@@ -242,7 +256,8 @@ export default function Page() {
       <SectionCard>
         <Stack gap={4}>
           <Text>
-            もしあなたが、アプリを閉じたあとの疲労感に心当たりがあるなら。まず、公開済みのFlatNewsから試してみてください。
+            もしあなたが、アプリを閉じたあとの疲労感に心当たりがあるなら。3つとも
+            App Storeで公開しています。気になったものから試してみてください。
           </Text>
           <Box>
             <Button asChild size="sm" variant="ghost">
@@ -253,6 +268,26 @@ export default function Page() {
               >
                 <FaLink />
                 &nbsp;App StoreでFlatNewsを見る
+              </a>
+            </Button>
+            <Button asChild size="sm" variant="ghost">
+              <a
+                href={MYPLANTS_STORE_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaLink />
+                &nbsp;App Storeでうちの植物を見る
+              </a>
+            </Button>
+            <Button asChild size="sm" variant="ghost">
+              <a
+                href={HITOMAZU_STORE_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaLink />
+                &nbsp;App Storeでひとまずを見る
               </a>
             </Button>
           </Box>

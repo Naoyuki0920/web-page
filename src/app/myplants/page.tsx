@@ -9,9 +9,37 @@ import MotionWrapper from "../components/motionWrapper";
 import FeatureSection from "../components/feature-section";
 import Footer from "../components/footer";
 
+const STORE_URL = "https://apps.apple.com/jp/app/id6799691902?ct=web";
+
+const appJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: "うちの植物",
+  operatingSystem: "iOS",
+  applicationCategory: "LifestyleApplication",
+  description:
+    "急かさない観葉植物の育成記録アプリ。水やりの予定日を表示せず、通知は朝1回だけ。見送った日も記録に残ります。",
+  offers: {
+    "@type": "Offer",
+    price: "0",
+    priceCurrency: "JPY",
+    description:
+      "無料で3株まで記録できます。サブスクリプション「うちの植物+」は月200円・年2,000円。",
+  },
+  url: "https://apps.apple.com/jp/app/id6799691902",
+  author: {
+    "@type": "Person",
+    name: "Naoyuki Masuda",
+  },
+};
+
 export default function Page() {
   return (
     <MotionWrapper>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(appJsonLd) }}
+      />
       <SectionCard>
         <Stack gap={5}>
           <Stack direction="row" align="center" gap="20px">
@@ -37,10 +65,14 @@ export default function Page() {
               <Text>急かさない観葉植物の育成記録アプリ。</Text>
             </Stack>
           </Stack>
-          <Text fontSize="sm" color="fg.muted">
-            App
-            Storeでの公開を準備しています。公開日は、約束できる段階になってから書きます。
-          </Text>
+          <Box>
+            <Button asChild size="sm" variant="ghost">
+              <a href={STORE_URL} target="_blank" rel="noopener noreferrer">
+                <FaLink />
+                &nbsp;App Storeで見る
+              </a>
+            </Button>
+          </Box>
         </Stack>
       </SectionCard>
 
@@ -127,22 +159,26 @@ export default function Page() {
       </SectionCard>
 
       <SectionCard>
-        <FeatureSection title="価格（予定）">
+        <FeatureSection title="価格">
           <Text>
-            無料で3株まで記録できます。うちの植物+は月200円・年2,000円の予定です。
+            無料で3株まで記録できます。うちの植物+は月200円・年2,000円です。
           </Text>
-          <Text fontSize="sm" color="fg.muted">
-            価格は公開までに変わる可能性があります。
-          </Text>
+          <Text>広告はありません。今後も入れません。</Text>
         </FeatureSection>
       </SectionCard>
 
       <SectionCard>
         <Stack gap={4}>
           <Text>
-            植物は、カレンダーどおりには乾きません。それを前提にしたアプリを、いま公開に向けて仕上げています。
+            植物は、カレンダーどおりには乾きません。それを前提にしたアプリを、一度試してみてください。
           </Text>
           <Box>
+            <Button asChild size="sm" variant="ghost">
+              <a href={STORE_URL} target="_blank" rel="noopener noreferrer">
+                <FaLink />
+                &nbsp;App Storeで見る
+              </a>
+            </Button>
             <Button asChild size="sm" variant="ghost">
               <NextLink href="/myplants/privacy">
                 <FaLink />

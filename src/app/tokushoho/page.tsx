@@ -38,15 +38,14 @@ export default function Page() {
           <Heading as="h2" size="lg">販売価格</Heading>
           <Stack gap={1}>
             <Text>
-              ・<b>FlatNews</b>（FlatNews+）：月額400円 ／
-              年額3,000円（1週間の無料トライアルあり）
+              ・<b>FlatNews</b>（FlatNews+）：月額400円 ／ 年額3,000円
             </Text>
             <Text>
               ・<b>うちの植物</b>（うちの植物+）：月額200円 ／ 年額2,000円
             </Text>
             <Text>
               ・<b>ひとまず</b>（ひとまずPro）：月額300円 ／ 年額1,200円 ／
-              買い切り4,800円
+              買い切り5,000円
             </Text>
           </Stack>
           <Text>
@@ -70,10 +69,6 @@ export default function Page() {
             <Text>
               ・<b>サブスクリプション</b>
               ：購入手続きの完了時に課金されます。期間終了の24時間前までに解約されない限り自動的に更新され、更新分の料金は現在の期間が終了する前の24時間以内に課金されます。
-            </Text>
-            <Text>
-              ・<b>無料トライアル</b>
-              ：トライアル期間の終了時に課金されます。期間終了の24時間前までに解約された場合、料金は発生しません。
             </Text>
             <Text>
               ・<b>買い切り</b>：購入手続きの完了時に課金されます。
@@ -110,7 +105,7 @@ export default function Page() {
           </Text>
 
           <Text fontSize="sm" color="fg.muted">
-            最終更新日：2026年8月18日
+            最終更新日：2026年8月31日
           </Text>
         </Stack>
       </SectionCard>
