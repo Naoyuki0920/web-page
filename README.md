@@ -35,7 +35,6 @@ npm run format  # Prettier
 | ------------------- | ------------------------------- |
 | `/`                 | プロフィール、経歴、SNS         |
 | `/application`      | 制作したアプリの紹介            |
-| `/flatnews/privacy` | FlatNews プライバシーポリシー   |
 | `/myplants/privacy` | うちの植物 プライバシーポリシー |
 
 デザインは [Takuya Matsuyama](https://www.craftz.dog/) 氏のサイトを参考にしています。

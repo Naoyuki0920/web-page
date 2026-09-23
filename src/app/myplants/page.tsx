@@ -188,7 +188,7 @@ export default function Page() {
             <Button asChild size="sm" variant="ghost">
               <NextLink href="/apps">
                 <FaLink />
-                &nbsp;3つのアプリについて
+                &nbsp;2つのアプリについて
               </NextLink>
             </Button>
           </Box>

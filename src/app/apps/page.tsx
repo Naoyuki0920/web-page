@@ -16,9 +16,8 @@ import MotionWrapper from "../components/motionWrapper";
 import FeatureSection from "../components/feature-section";
 import Footer from "../components/footer";
 
-const FLATNEWS_STORE_URL = "https://apps.apple.com/jp/app/id6784650295?ct=web";
-const MYPLANTS_STORE_URL = "https://apps.apple.com/jp/app/id6799691902?ct=web";
 const HITOMAZU_STORE_URL = "https://apps.apple.com/jp/app/id6800239037?ct=web";
+const MYPLANTS_STORE_URL = "https://apps.apple.com/jp/app/id6799691902?ct=web";
 
 function AppRow({
   icon,
@@ -58,15 +57,9 @@ export default function Page() {
       <SectionCard>
         <Stack gap={4}>
           <Heading as="h1" size="2xl">
-            広告のないアプリを、3つ作っています。
+            広告のないアプリを、2つ作っています。
           </Heading>
           <Box w="20px" h="2px" bg="accent" />
-          <Text>
-            はじまりは、ニュースアプリで広告を誤タップしたことでした。読みたい記事より先に、指が広告に触れる。タップ範囲が大きくて、本文にたどり着けないこともある。世の中の動向を平たく知りたいだけなのに、と思いました。
-          </Text>
-          <Text>
-            それで自分用に作ったのが FlatNews です。いまは分野の違う3つになりましたが、どれも同じ理由で作っています——自分が使いたいから。
-          </Text>
           <Text>
             長く使われても私は1円も得をしません。引き止める仕掛けを作る理由が、設計のどこにもないからです。
           </Text>
@@ -76,24 +69,24 @@ export default function Page() {
       <SectionCard>
         <Stack gap={4}>
           <AppRow
-            icon="/image/flatnews-icon.png"
-            alt="FlatNewsのアプリアイコン"
-            name="FlatNews"
-            tagline="静かで、正直なニュース。"
+            icon="/image/hitomazu-icon.png"
+            alt="ひとまずのアプリアイコン"
+            name="ひとまず"
+            tagline="スマホの使いすぎに、ひと呼吸。"
           />
           <Text>
-            広告も、追跡も、無限スクロールもないニュースアプリです。並び順はメディア均等で、特定の媒体がフィードを独占しません。
+            ブロックせずに、開く前に「いま、何をしに?」と聞きます。引き返した回数を数えるアプリです。
           </Text>
           <Box>
             <Button asChild size="sm" variant="ghost">
-              <NextLink href="/flatnews">
+              <NextLink href="/hitomazu">
                 <FaLink />
                 &nbsp;詳しく見る
               </NextLink>
             </Button>
             <Button asChild size="sm" variant="ghost">
               <a
-                href={FLATNEWS_STORE_URL}
+                href={HITOMAZU_STORE_URL}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -138,39 +131,7 @@ export default function Page() {
       </SectionCard>
 
       <SectionCard>
-        <Stack gap={4}>
-          <AppRow
-            icon="/image/hitomazu-icon.png"
-            alt="ひとまずのアプリアイコン"
-            name="ひとまず"
-            tagline="スマホの使いすぎに、ひと呼吸。"
-          />
-          <Text>
-            ブロックせずに、開く前に「いま、何をしに?」と聞きます。引き返した回数を数えるアプリです。
-          </Text>
-          <Box>
-            <Button asChild size="sm" variant="ghost">
-              <NextLink href="/hitomazu">
-                <FaLink />
-                &nbsp;詳しく見る
-              </NextLink>
-            </Button>
-            <Button asChild size="sm" variant="ghost">
-              <a
-                href={HITOMAZU_STORE_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaLink />
-                &nbsp;App Storeで見る
-              </a>
-            </Button>
-          </Box>
-        </Stack>
-      </SectionCard>
-
-      <SectionCard>
-        <FeatureSection title="3つのアプリが、断ったもの">
+        <FeatureSection title="2つのアプリが、断ったもの">
           <Text>機能の一覧ではなく、実装しなかったものの一覧です。</Text>
           <Table.ScrollArea>
             <Table.Root size="sm">
@@ -183,19 +144,14 @@ export default function Page() {
               </Table.Header>
               <Table.Body>
                 <Table.Row>
-                  <Table.Cell>FlatNews</Table.Cell>
-                  <Table.Cell>ニュースの消費</Table.Cell>
-                  <Table.Cell>無限スクロール・おすすめ・行動追跡</Table.Cell>
+                  <Table.Cell>ひとまず</Table.Cell>
+                  <Table.Cell>スクリーンタイム</Table.Cell>
+                  <Table.Cell>強制ブロック・罰・前週比の赤い数字</Table.Cell>
                 </Table.Row>
                 <Table.Row>
                   <Table.Cell>うちの植物</Table.Cell>
                   <Table.Cell>暮らしと通知</Table.Cell>
                   <Table.Cell>予定日の押し付け・ストリーク・バッジ</Table.Cell>
-                </Table.Row>
-                <Table.Row>
-                  <Table.Cell>ひとまず</Table.Cell>
-                  <Table.Cell>スクリーンタイム</Table.Cell>
-                  <Table.Cell>強制ブロック・罰・前週比の赤い数字</Table.Cell>
                 </Table.Row>
               </Table.Body>
             </Table.Root>
@@ -207,9 +163,11 @@ export default function Page() {
         <FeatureSection title="よくある質問">
           <Stack gap={5}>
             <Stack gap={2}>
-              <Heading as="h3" size="md">広告のないニュースアプリはありますか。</Heading>
+              <Heading as="h3" size="md">
+                スマホをブロックしないスクリーンタイム アプリはありますか。
+              </Heading>
               <Text>
-                FlatNewsは、広告のないニュースアプリです。26媒体・約2,400記事/日を、特定の媒体に偏らない並びで表示します。行動追跡もおすすめもなく、収益はFlatNews+（月400円・年3,000円）だけです。広告は今後も入れません。
+                ひとまずは、アプリをブロックしません。開く前にシールドが「いま、何をしに?」と聞くだけです。引き返した回数を数え、前週比や罰、ストリークはありません。
               </Text>
             </Stack>
 
@@ -223,25 +181,16 @@ export default function Page() {
             </Stack>
 
             <Stack gap={2}>
-              <Heading as="h3" size="md">
-                スマホをブロックしないスクリーンタイム アプリはありますか。
-              </Heading>
-              <Text>
-                ひとまずは、アプリをブロックしません。開く前にシールドが「いま、何をしに?」と聞くだけです。引き返した回数を数え、前週比や罰、ストリークはありません。
-              </Text>
-            </Stack>
-
-            <Stack gap={2}>
               <Heading as="h3" size="md">なぜ広告を入れないのですか。</Heading>
               <Text>
-                広告で収益を得ると、あなたの滞在時間が私の収入になります。その構造のままでは、静かなアプリは作れません。だから3つとも、収益は少額の課金だけにしています。
+                広告で収益を得ると、あなたの滞在時間が私の収入になります。その構造のままでは、静かなアプリは作れません。だから2つとも、収益は少額の課金だけにしています。
               </Text>
             </Stack>
 
             <Stack gap={2}>
               <Heading as="h3" size="md">利用データはどこに保存されますか。</Heading>
               <Text>
-                3つとも、あなたの記録は端末とあなたのiCloudにだけ保存されます。開発者のサーバーにユーザーのデータを置きません。「信じてください」ではなく、構造的に集められない設計です。
+                2つとも、あなたの記録は端末とあなたのiCloudにだけ保存されます。開発者のサーバーにユーザーのデータを置きません。「信じてください」ではなく、構造的に集められない設計です。
               </Text>
             </Stack>
 
@@ -256,18 +205,18 @@ export default function Page() {
       <SectionCard>
         <Stack gap={4}>
           <Text>
-            もしあなたが、アプリを閉じたあとの疲労感に心当たりがあるなら。3つとも
+            もしあなたが、アプリを閉じたあとの疲労感に心当たりがあるなら。2つとも
             App Storeで公開しています。気になったものから試してみてください。
           </Text>
           <Box>
             <Button asChild size="sm" variant="ghost">
               <a
-                href={FLATNEWS_STORE_URL}
+                href={HITOMAZU_STORE_URL}
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <FaLink />
-                &nbsp;App StoreでFlatNewsを見る
+                &nbsp;App Storeでひとまずを見る
               </a>
             </Button>
             <Button asChild size="sm" variant="ghost">
@@ -278,16 +227,6 @@ export default function Page() {
               >
                 <FaLink />
                 &nbsp;App Storeでうちの植物を見る
-              </a>
-            </Button>
-            <Button asChild size="sm" variant="ghost">
-              <a
-                href={HITOMAZU_STORE_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaLink />
-                &nbsp;App Storeでひとまずを見る
               </a>
             </Button>
           </Box>
