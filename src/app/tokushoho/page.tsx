@@ -38,14 +38,11 @@ export default function Page() {
           <Heading as="h2" size="lg">販売価格</Heading>
           <Stack gap={1}>
             <Text>
-              ・<b>FlatNews</b>（FlatNews+）：月額400円 ／ 年額3,000円
+              ・<b>ひとまず</b>（ひとまずPro）：月額300円 ／ 年額1,200円 ／
+              買い切り5,000円
             </Text>
             <Text>
               ・<b>うちの植物</b>（うちの植物+）：月額200円 ／ 年額2,000円
-            </Text>
-            <Text>
-              ・<b>ひとまず</b>（ひとまずPro）：月額300円 ／ 年額1,200円 ／
-              買い切り5,000円
             </Text>
           </Stack>
           <Text>

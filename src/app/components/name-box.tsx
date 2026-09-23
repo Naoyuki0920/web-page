@@ -8,7 +8,7 @@ export default function NameBox() {
     <Box>
       <Flex
         direction={{ base: "column", sm: "row" }}
-        align={{ base: "center", sm: "flex-start" }}
+        align="center"
         justify="space-between"
         maxW="5xl"
         mx="auto"

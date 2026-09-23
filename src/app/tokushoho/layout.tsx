@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "特定商取引法に基づく表記",
   description:
-    "Naoyuki Masuda が提供する iOS アプリ（FlatNews・うちの植物・ひとまず）のアプリ内課金に関する特定商取引法に基づく表記です。",
+    "Naoyuki Masuda が提供する iOS アプリ（ひとまず・うちの植物）のアプリ内課金に関する特定商取引法に基づく表記です。",
   alternates: {
     canonical: "/tokushoho",
   },
