@@ -39,7 +39,7 @@ export default function Page() {
 
           <Heading as="h2" size="lg">スクリーンタイムへのアクセスについて</Heading>
           <Text>
-            本アプリは、選んだアプリを開く前にひと呼吸を挟むために、Appleのスクリーンタイム関連機能（Family
+            本アプリは、選んだアプリや、Safariで開くWebサイトの前にひと呼吸を挟むために、Appleのスクリーンタイム関連機能（Family
             Controls）へのアクセス許可をお願いします。この許可は、見守るアプリを選ぶ操作をした時にのみ求めます。
           </Text>
           <Stack gap={2}>
@@ -55,6 +55,10 @@ export default function Page() {
               IDを文字列として取り出すことはできません。ひと呼吸の画面にアプリ名やアイコンを表示する場合も、描画はOSが行います。
             </Text>
             <Text>
+              ・<b>選んだWebサイトも同じく記号として扱われます。</b>
+              Webサイトの見守り（ひとまず Pro）で選んだサイトも「不透明な識別子」としてのみ渡され、本アプリはそのアドレスを文字列として取り出せません。閲覧履歴を読むこともありません。
+            </Text>
+            <Text>
               ・これらの情報は、いずれも端末の外に出ることはありません。
             </Text>
           </Stack>
@@ -64,12 +68,18 @@ export default function Page() {
             以下はお使いの端末内に保存されます。本アプリを削除すると、これらの情報も端末から削除されます。
           </Text>
           <Stack gap={1}>
-            <Text>・見守る対象として選んだアプリの識別子</Text>
+            <Text>・見守る対象として選んだアプリ・Webサイトの識別子</Text>
             <Text>
               ・ひと呼吸のたびの記録（日時、「目的がある」「なんとなく」のどちらを選んだか、開いたか引き返したか）
             </Text>
             <Text>・アプリに付けた呼び名（任意で入力した場合のみ）</Text>
             <Text>・問いかけの数や言葉、外観などのアプリ設定</Text>
+            <Text>
+              ・日ごとの引き返しの数（ホーム画面のウィジェットに表示するため。端末内で本アプリとウィジェットの間でのみ受け渡します）
+            </Text>
+            <Text>
+              ・ひとまず Pro の購読の有効期限（購読が終わった時に、見守りを最初に登録した1つに戻すため）
+            </Text>
           </Stack>
 
           <Heading as="h2" size="lg">iCloudでの同期について</Heading>
@@ -92,6 +102,21 @@ export default function Page() {
               ・iCloudに同期された内容は、iOSの「設定」からiCloud上のデータを削除することで消去できます。
             </Text>
           </Stack>
+
+          <Heading as="h2" size="lg">Apple Intelligence（問いかけの候補）</Heading>
+          <Text>
+            ひとまず Pro の「問いかけの候補」は、Appleが端末内で動かすモデル（Apple
+            Intelligence）を使います。候補を考えるために入力した言葉は<b>端末の外へ送られず、保存もされません</b>。この機能は、Apple
+            Intelligenceに対応し、有効にしている端末でのみ表示されます。
+          </Text>
+
+          <Heading as="h2" size="lg">ショートカットについて</Heading>
+          <Text>
+            本アプリは、「今週の引き返し」「今週の立ち止まり」の回数をAppleのショートカットアプリに渡せます。本アプリから自動で送ることはなく、ご自身がショートカットを実行した時にだけ、その数（整数）が渡ります。
+          </Text>
+          <Text>
+            ご自身で作ったショートカットの中で、その数をクラウドのAIモデルや他のアプリ・サービスへ渡すように組んだ場合は、その数がそちらへ送られ、送り先のポリシーに従って扱われます。
+          </Text>
 
           <Heading as="h2" size="lg">外部への送信</Heading>
           <Text>
@@ -116,7 +141,7 @@ export default function Page() {
           <Heading as="h2" size="lg">購入について（ひとまず Pro）</Heading>
           <Text>
             有料機能の購入・更新・解約は、AppleのApp
-            Store（StoreKit）を通じて行われます。お支払い情報はAppleが管理し、本アプリは受け取りません。本アプリは購入状態（有効か否か）のみを参照します。
+            Store（StoreKit）を通じて行われます。お支払い情報はAppleが管理し、本アプリは受け取りません。本アプリは購入状態（有効か否か）と購読の有効期限のみを参照します。
           </Text>
 
           <Heading as="h2" size="lg">第三者サービス</Heading>
@@ -152,7 +177,7 @@ export default function Page() {
           </Text>
 
           <Text fontSize="sm" color="fg.muted">
-            最終更新日：2026年8月12日
+            最終更新日：2026年9月26日
           </Text>
         </Stack>
       </SectionCard>
@@ -195,8 +220,8 @@ export default function Page() {
 
           <Heading as="h2" size="lg">Screen Time access</Heading>
           <Text>
-            To place a breath before you open an app you have chosen, the App
-            asks for permission to use Apple&rsquo;s Screen Time features
+            To place a breath before you open an app you have chosen, or a
+            website you have chosen in Safari, the App asks for permission to use Apple&rsquo;s Screen Time features
             (Family Controls). This permission is requested only when you go to
             choose the apps you want to watch over.
           </Text>
@@ -215,6 +240,12 @@ export default function Page() {
               is the operating system that draws it.
             </Text>
             <Text>
+              &bull; <b>The websites you choose are handled as symbols too.</b>{" "}
+              Websites you choose to watch (Hitomazu Pro) also reach the App
+              only as opaque identifiers; the App cannot read out their
+              addresses as text, and it never reads your browsing history.
+            </Text>
+            <Text>
               &bull; None of this information ever leaves your device.
             </Text>
           </Stack>
@@ -226,7 +257,8 @@ export default function Page() {
           </Text>
           <Stack gap={1}>
             <Text>
-              &bull; Identifiers for the apps you chose to watch over
+              &bull; Identifiers for the apps and websites you chose to watch
+              over
             </Text>
             <Text>
               &bull; A record of each breath (date and time, which of the two
@@ -240,6 +272,16 @@ export default function Page() {
             <Text>
               &bull; App settings such as the number and wording of the prompts,
               and appearance
+            </Text>
+            <Text>
+              &bull; The number of times you turned back on each day (to show
+              on the Home Screen widget; passed only between the App and its
+              widget, on your device)
+            </Text>
+            <Text>
+              &bull; The expiration date of your Hitomazu Pro subscription (so
+              that, when a subscription ends, watching can go back to the first
+              app you added)
             </Text>
           </Stack>
 
@@ -266,6 +308,30 @@ export default function Page() {
               App&rsquo;s iCloud data from the iOS Settings app.
             </Text>
           </Stack>
+
+          <Heading as="h2" size="lg">
+            Apple Intelligence (question ideas)
+          </Heading>
+          <Text>
+            The &ldquo;question ideas&rdquo; feature of Hitomazu Pro uses the
+            model Apple runs on your device (Apple Intelligence). What you type
+            to get ideas is <b>never sent off your device and never saved</b>.
+            The feature appears only on devices that support Apple Intelligence
+            and have it turned on.
+          </Text>
+
+          <Heading as="h2" size="lg">Shortcuts</Heading>
+          <Text>
+            The App can hand this week&rsquo;s turn-back and pause counts to
+            Apple&rsquo;s Shortcuts app. Nothing is sent automatically; the
+            count (a single number) is passed only when you run a shortcut
+            yourself.
+          </Text>
+          <Text>
+            If you build a shortcut that passes that number to a cloud AI model
+            or another app or service, the number is sent there and handled
+            under that destination&rsquo;s policy.
+          </Text>
 
           <Heading as="h2" size="lg">Sending information outside</Heading>
           <Text>
@@ -305,7 +371,8 @@ export default function Page() {
             Purchases, renewals and cancellations of paid features are handled
             through Apple&rsquo;s App Store (StoreKit). Your payment information
             is managed by Apple and is never received by the App. The App only
-            refers to whether a purchase is active.
+            refers to whether a purchase is active and when a subscription
+            expires.
           </Text>
 
           <Heading as="h2" size="lg">Third-party services</Heading>
@@ -347,7 +414,7 @@ export default function Page() {
           </Text>
 
           <Text fontSize="sm" color="fg.muted">
-            Last updated: August 12, 2026
+            Last updated: September 26, 2026
           </Text>
           <Text fontSize="sm" color="fg.muted">
             This English text is a translation provided for convenience. If the
