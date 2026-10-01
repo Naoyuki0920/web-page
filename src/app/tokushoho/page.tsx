@@ -38,8 +38,11 @@ export default function Page() {
           <Heading as="h2" size="lg">販売価格</Heading>
           <Stack gap={1}>
             <Text>
-              ・<b>ひとまず</b>（ひとまずPro）：月額300円 ／ 年額1,200円 ／
-              買い切り5,000円
+              ・<b>ひとまず</b>（ひとまずPro）：買い切り8,000円 ／ 年額1,800円 ／
+              月額400円
+            </Text>
+            <Text fontSize="sm" color="fg.muted">
+              ※2026年10月26日までに始めた年額・月額の購読は、その時の価格のまま更新されます。
             </Text>
             <Text>
               ・<b>うちの植物</b>（うちの植物+）：月額200円 ／ 年額2,000円
